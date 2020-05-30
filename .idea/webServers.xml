@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0ed5d019-f353-4b3d-9e38-6b10c31cbd65" name="Servidor_TFG" url="">
+        <fileTransfer host="10.0.0.15" port="23" rootFolder="/home/ubuntu/TFG/BacnetWeb" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="23" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block js_script %}
+    <script src="{{ url_for('static', filename='reset_pass.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+<h2>Reset password</h2>
+
+<form id="form_new_pass" action="{{ url_for('user.new_pass', token=token) }}" method="post">
+    <div class="imgcontainer">
+        <img src="{{ url_for('static', filename='img_avatar2.png') }}" alt="Avatar" class="avatar">
+    </div><token>
+
+    <div class="container">
+        <label for="pwd_new" ><b>Password</b></label>
+        <input id="pwd_new" type="password" placeholder="New password" name="pwd_new" required >
+        <label for="pwd_rpt" ><b>Password Repeat</b></label>
+        <input id="pwd_rpt" type="password" placeholder="Repeat new password" name="pwd_rpt" required >
+
+        <button id="edit_btn" type="submit">Save</button>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+
+    </div>
+</form>
+{% endblock %}

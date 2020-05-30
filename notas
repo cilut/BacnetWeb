@@ -1,0 +1,3 @@
+Abrir terminal de base de datos:
+
+    psql -h localhost -U tfg -w tfg

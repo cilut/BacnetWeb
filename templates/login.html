@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block js_script %}
+    <script src="{{ url_for('static', filename='login_check.js') }}"></script>
+{% endblock %}
+{% block body %}
+
+
+    <h2 align="center">Login Form</h2>
+
+    <form id="form">
+        <div class="imgcontainer">
+            <img src="{{ url_for('static', filename='img_avatar2.png') }}" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="user"><b>Username</b></label>
+            <input id="user" type="text" placeholder="Enter Username" name="user" required>
+
+            <label for="pwd"><b>Password</b></label>
+            <input id="pwd" type="password" placeholder="Enter Password" name="pwd" required>
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <a href='signup'>
+                <button type="button" class="regbtn">Registro</button>
+            </a>
+            <span class="psw">Forgot <a href="reset_pass">password?</a></span>
+        </div>
+    </form>
+{% endblock %}
