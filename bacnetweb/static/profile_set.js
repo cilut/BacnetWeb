@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Initialize new request
                 const request = new XMLHttpRequest();
-                const user = document.querySelector('#user').value;
+                const user = document.querySelector('#users').value;
                 const email = document.querySelector('#email').value;
                 const pwd = document.querySelector('#pwd').value;
                 const pwd_new = document.querySelector('#pwd_new').value;
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 request.onload = () => {
 
                     // Extract JSON data from request
-                    const data = JSON.parse(request.responseText);
+                    const response = JSON.parse(request.responseText);
 
-                    if (data.success) {
+                    if (response.success) {
                         //On success allowed to change the page
                         let hiddens = document.querySelectorAll('.visible');
                         hiddens.forEach(unhidde);

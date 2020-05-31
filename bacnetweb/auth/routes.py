@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, Blueprint, redirect, url_for, jsonify
-from flask_login import login_user, login_required, logout_user, current_user
+from flask import render_template, request, Blueprint, redirect, url_for, jsonify
+from flask_login import login_user, login_required, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from .models import *
+from bacnetweb import db
+from bacnetweb.models import User
 
 auth = Blueprint('auth', __name__)
 
@@ -27,7 +28,7 @@ def show_signup_form():
 
 @auth.route("/signedup", methods=["POST"])
 def signedup():
-    name = request.form.get("user")
+    name = request.form.get("users")
     email = request.form.get("email")
     pwd = request.form.get("pwd")
     usr_db = User.query.filter_by(usr=name).first()

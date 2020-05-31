@@ -20,14 +20,14 @@
 
     <h2>Reset Form</h2>
 
-    <form id="form_rst_pass" action="{{ url_for('user.send_email') }}" method="post">
+    <form id="form_rst_pass" action="{{ url_for('users.send_email') }}" method="post">
         <div class="imgcontainer">
             <img src="{{ url_for('static', filename='img_avatar2.png') }}" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
 
-            <label for="user"><b>Email</b></label>
+            <label for="email"><strong>Email</strong></label>
             <input id="email" type="text" placeholder="Enter Email" name="email" required>
             <button type="submit">Reset Password</button>
 

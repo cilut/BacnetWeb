@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#form').onsubmit = () => {
         // Initialize new request
         const request = new XMLHttpRequest();
-        const user = document.querySelector('#user').value;
+        const user = document.querySelector('#users').value;
         const email = document.querySelector('#email').value;
         const pwd = document.querySelector('#pwd').value;
         const pwd_rpt = document.querySelector('#pwd_rpt').value;
@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         request.onload = () => {
 
             // Extract JSON data from request
-            const data = JSON.parse(request.responseText);
+            const response = JSON.parse(request.responseText);
 
             // Update the result div
-            if (data.success) {
+            if (response.success) {
                 //On success allowed to change the page
                 alert("Perfil creado satisfactoriamentes \n  Usuario: "+user+ "\n  Email: "+email);
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return true;
             } else {
                 alert("Pruebe otro nombre de usuario.");
-                document.querySelector('#user').value = '';
+                document.querySelector('#users').value = '';
                 return false;
             }
         }
