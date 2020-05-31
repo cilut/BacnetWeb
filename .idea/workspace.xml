@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+    <option name="SHOW_STRUCTURE" value="true" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="" />
+    <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/auth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/auth/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/bacnet/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/bacnet/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/main/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/users/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BacnetWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BacnetWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/create-usuer.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/Database/create-usuer.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/create_objects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/Database/create_objects.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img_avatar2.png" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/img_avatar2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login_check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profile_set.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/profile_set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/reset_pass.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/reset_pass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/signup_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/new_pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/reset_pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/selection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/users/routes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,38 +73,55 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1cKTI8QMSfiRvwE21fMhqbevTFA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../bacnet-db/web" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="bacnet-web" sdk-home="/usr/bin/python3.6">
+        <option name="useSoftWraps" value="true" />
         <option name="mySdkHome" value="/usr/bin/python3.6" />
         <option name="myModuleName" value="bacnet-web" />
       </console-settings>
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bacnetweb/static" />
+      <recent name="$PROJECT_DIR$/bacnetweb" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.bacnet-web">
+  <component name="RunManager" selected="Flask server.Flask (run.py)">
     <configuration name="new_pass.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bacnet-web/templates/new_pass.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -82,9 +140,39 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Flask (auth.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+    <configuration name="Flask (bacnetweb/__init__.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
       <module name="BacnetWeb" />
-      <option name="target" value="$PROJECT_DIR$/auth.py" />
+      <option name="target" value="$PROJECT_DIR$/bacnetweb/__init__.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (run.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="BacnetWeb" />
+      <option name="target" value="$PROJECT_DIR$/run.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="BacnetWeb" />
+      <option name="target" value="$PROJECT_DIR$/bacnetweb/auth.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,7 +187,7 @@
     </configuration>
     <configuration name="bacnet-web" type="Python.FlaskServer">
       <module name="BacnetWeb" />
-      <option name="target" value="$PROJECT_DIR$/main.py" />
+      <option name="target" value="$PROJECT_DIR$/bacnetweb/main.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,9 +202,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flask server.Flask (run.py)" />
         <item itemvalue="JavaScript Debug.new_pass.html" />
-        <item itemvalue="Flask server.Flask (__init__.py)" />
-        <item itemvalue="Flask server.Flask (auth.py)" />
+        <item itemvalue="Flask server.Flask (bacnetweb/__init__.py)" />
+        <item itemvalue="Flask server.Flask (bacnetweb/auth.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -151,23 +240,39 @@
       <workItem from="1590655414029" duration="7281000" />
       <workItem from="1590665608686" duration="13898000" />
       <workItem from="1590761977298" duration="4612000" />
-      <workItem from="1590848405462" duration="16065000" />
+      <workItem from="1590848405462" duration="17916000" />
+      <workItem from="1590883229475" duration="2632000" />
+      <workItem from="1590919655715" duration="22573000" />
     </task>
+    <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
+      <created>1590946549880</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590946549881</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Code restructuring making it more modular, each class is currently a module." />
+    <option name="LAST_COMMIT_MESSAGE" value="Code restructuring making it more modular, each class is currently a module." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2162" y="45" width="800" height="689" key="#Deployment" timestamp="1590690479785">
+    <state x="2162" y="25" width="800" height="689" key="#Deployment" timestamp="1590944484936">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1035" y="195" width="800" height="684" key="#Deployment/0.27.1920.1013@0.27.1920.1013" timestamp="1590583727065" />
-    <state x="2162" y="45" width="800" height="689" key="#Deployment/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590690479785" />
-    <state x="1035" y="195" width="800" height="684" key="#Inspections" timestamp="1590449608386">
-      <screen x="0" y="27" width="1920" height="1013" />
+    <state x="2162" y="25" width="800" height="689" key="#Deployment/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944484936" />
+    <state x="2535" y="169" width="800" height="689" key="#Inspections" timestamp="1590943409191">
+      <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1035" y="195" width="800" height="684" key="#Inspections/0.27.1920.1013@0.27.1920.1013" timestamp="1590449608386" />
+    <state x="2535" y="169" width="800" height="689" key="#Inspections/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590943409191" />
     <state x="2650" y="317" width="636" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590866342281">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
@@ -177,52 +282,89 @@
       <screen x="0" y="27" width="1920" height="1013" />
     </state>
     <state x="1176" y="371" width="518" height="332" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.27.1920.1013@0.27.1920.1013" timestamp="1590584478679" />
-    <state x="693" y="282" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590279087362">
-      <screen x="0" y="27" width="1920" height="1013" />
-    </state>
-    <state x="693" y="282" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1013@0.27.1920.1013" timestamp="1590279087362" />
-    <state x="1511" y="22" width="1716" height="846" maximized="true" key="DirDiffDialog" timestamp="1590857987354">
+    <state x="2193" y="262" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590946178773">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
-    <state x="1511" y="22" width="1716" height="846" maximized="true" key="DirDiffDialog/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590857987354" />
+    <state x="693" y="282" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1013@0.27.1920.1013" timestamp="1590279087362" />
+    <state x="2193" y="262" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590946178773" />
+    <state x="2198" y="399" width="519" height="282" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590941517104">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2198" y="399" width="519" height="282" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590941517104" />
+    <state x="1865" y="73" width="1185" height="924" key="CommitChangelistDialog2" timestamp="1590946549636">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1865" y="73" width="1185" height="924" key="CommitChangelistDialog2/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590946549636" />
+    <state x="1511" y="22" width="1712" height="874" key="DirDiffDialog" timestamp="1590945331514">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1511" y="22" width="1712" height="874" key="DirDiffDialog/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590945331514" />
     <state x="2246" y="292" width="424" height="496" key="FileChooserDialogImpl" timestamp="1590851320852">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="2246" y="292" width="424" height="496" key="FileChooserDialogImpl/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590851320852" />
-    <state width="904" height="281" key="GridCell.Tab.0.bottom" timestamp="1590357942892">
-      <screen x="0" y="27" width="1920" height="1013" />
+    <state width="1874" height="324" key="GridCell.Tab.0.bottom" timestamp="1590944371804">
+      <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state width="904" height="281" key="GridCell.Tab.0.bottom/0.27.1920.1013@0.27.1920.1013" timestamp="1590357942892" />
-    <state width="904" height="281" key="GridCell.Tab.0.center" timestamp="1590357942892">
-      <screen x="0" y="27" width="1920" height="1013" />
+    <state width="1874" height="324" key="GridCell.Tab.0.bottom/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371804" />
+    <state width="1874" height="324" key="GridCell.Tab.0.center" timestamp="1590944371804">
+      <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state width="904" height="281" key="GridCell.Tab.0.center/0.27.1920.1013@0.27.1920.1013" timestamp="1590357942892" />
-    <state width="904" height="281" key="GridCell.Tab.0.left" timestamp="1590357942892">
-      <screen x="0" y="27" width="1920" height="1013" />
+    <state width="1874" height="324" key="GridCell.Tab.0.center/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371804" />
+    <state width="1874" height="324" key="GridCell.Tab.0.left" timestamp="1590944371803">
+      <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state width="904" height="281" key="GridCell.Tab.0.left/0.27.1920.1013@0.27.1920.1013" timestamp="1590357942892" />
-    <state width="904" height="281" key="GridCell.Tab.0.right" timestamp="1590357942892">
-      <screen x="0" y="27" width="1920" height="1013" />
+    <state width="1874" height="324" key="GridCell.Tab.0.left/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371803" />
+    <state width="1874" height="324" key="GridCell.Tab.0.right" timestamp="1590944371804">
+      <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state width="904" height="281" key="GridCell.Tab.0.right/0.27.1920.1013@0.27.1920.1013" timestamp="1590357942892" />
-    <state x="1923" y="244" width="1016" height="742" key="SettingsEditor" timestamp="1590871409960">
+    <state width="1874" height="324" key="GridCell.Tab.0.right/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371804" />
+    <state width="1874" height="324" key="GridCell.Tab.1.bottom" timestamp="1590944371805">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="324" key="GridCell.Tab.1.bottom/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371805" />
+    <state width="1874" height="324" key="GridCell.Tab.1.center" timestamp="1590944371804">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="324" key="GridCell.Tab.1.center/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371804" />
+    <state width="1874" height="324" key="GridCell.Tab.1.left" timestamp="1590944371804">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="324" key="GridCell.Tab.1.left/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371804" />
+    <state width="1874" height="324" key="GridCell.Tab.1.right" timestamp="1590944371805">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="324" key="GridCell.Tab.1.right/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944371805" />
+    <state x="1923" y="229" width="1016" height="742" key="SettingsEditor" timestamp="1590933481885">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="27" width="1022" height="737" key="SettingsEditor/0.27.1920.1013@0.27.1920.1013" timestamp="1590584606893" />
-    <state x="1923" y="244" width="1016" height="742" key="SettingsEditor/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590871409960" />
+    <state x="1923" y="229" width="1016" height="742" key="SettingsEditor/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590933481885" />
     <state x="613" y="130" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590529239256">
       <screen x="0" y="27" width="1920" height="1013" />
     </state>
     <state x="613" y="130" width="683" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1013@0.27.1920.1013" timestamp="1590529239256" />
+    <state x="1999" y="217" width="918" height="636" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590939383321">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1999" y="217" width="918" height="636" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590939383321" />
     <state x="2178" y="355" width="501" height="547" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1590690185224">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="2178" y="355" width="501" height="547" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590690185224" />
-    <state x="2836" y="195" width="192" height="647" key="ftp.server.browser" timestamp="1590690291982">
+    <state x="2265" y="80" width="704" height="867" key="find.popup" timestamp="1590941981593">
+      <screen x="1500" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2265" y="80" width="704" height="867" key="find.popup/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590941981593" />
+    <state x="2836" y="190" width="192" height="647" key="ftp.server.browser" timestamp="1590944415006">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1336" y="219" width="532" height="678" key="ftp.server.browser/0.27.1920.1013@0.27.1920.1013" timestamp="1590584014489" />
-    <state x="2836" y="195" width="192" height="647" key="ftp.server.browser/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590690291982" />
+    <state x="2836" y="190" width="192" height="647" key="ftp.server.browser/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944415006" />
     <state x="1103" y="249" width="672" height="678" key="search.everywhere.popup" timestamp="1590411451687">
       <screen x="0" y="27" width="1920" height="1013" />
     </state>
@@ -232,8 +374,25 @@
     </state>
     <state x="205" y="433" width="540" height="205" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1013@0.27.1920.1013" timestamp="1590331236250" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bacnetweb/auth/routes.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bacnetweb/auth/routes.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bacnet_web$Flask__application_py_.coverage" NAME="Flask (application.py) Coverage Results" MODIFIED="1590340247040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BacnetWeb$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1590939355211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/bacnet_web$Flask.coverage" NAME="Flask (__init__.py) Coverage Results" MODIFIED="1590341652092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bacnet_web$Flask____init___py_.coverage" NAME="Flask (__init__.py) Coverage Results" MODIFIED="1590320903173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
