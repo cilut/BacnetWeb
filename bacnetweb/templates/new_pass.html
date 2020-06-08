@@ -1,27 +1,29 @@
 {% extends "layout.html" %}
+{% import "macros.html" as macros %}
 
 {% block js_script %}
     <script src="{{ url_for('static', filename='reset_pass.js') }}"></script>
-
 {% endblock %}
 
-{% block body %}
-    <h2>Reset password</h2>
+{% block lateral_panel%}
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Login</a>
+    <a href="http://ciprianilut.ddns.net/signup">Signup</a>
+{% endblock %}
 
+{% block title %}New Password Form{% endblock %}
+{% block form %}
     <form id="form_new_pass" action="{{ url_for('users.new_pass', token=token) }}" method="post">
-        <div class="imgcontainer">
-            <img src="{{ url_for('static', filename='img_avatar2.png') }}" alt="Avatar" class="avatar">
+        {% block imagen %}
+            {{ super() }}
+        {% endblock %}
+
+        <div class="container">
+            {{ macros.input('pwd_new', 'Password', 'New Password', 'password') }}
+            {{ macros.input('pwd_rpt', 'Password', 'Repeat new password', 'password') }}
+            <button id="edit_btn" type="submit">Save</button>
         </div>
-
-            <div class="container">
-                <label for="pwd_new"><strong>Password</strong></label>
-                <input id="pwd_new" type="password" placeholder="New password" name="pwd_new" required>
-                <label for="pwd_rpt"><strong>Password Repeat</strong>b></label>
-                <input id="pwd_rpt" type="password" placeholder="Repeat new password" name="pwd_rpt" required>
-
-                <button id="edit_btn" type="submit">Save</button>
-            </div>
-            <div class="container" style="background-color:#f1f1f1">
-            </div>
+        <div class="container" style="background-color:#f1f1f1">
+        </div>
     </form>
 {% endblock %}

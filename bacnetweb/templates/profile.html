@@ -1,39 +1,50 @@
-{% extends "layout.html" %}
+{% extends "layout.html"%}
+{% import "macros.html" as macros %}
 
 {% block js_script %}
     <script src="{{ url_for('static', filename='profile_set.js') }}"></script>
-
 {% endblock %}
 
-{% block body %}
-<h2>User</h2>
-<p>
-            Texto de prueba a esta pagina unicamentes se puede acceder si te has logueado en la aplicacion <br/>
-            Para comprobar eto pulsar sobre el boton Logout posterirormente intenta de nuevo acceder http://127.0.0.1:5000/profile, te dara error
-</p>
-<form id="form">
-    <div class="imgcontainer">
-        <img src="{{ url_for('static', filename='img_avatar2.png') }}" alt="Avatar" class="avatar">
-    </div>
+{% block lateral_panel%}
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Bacnet Objects</a>
+    <a href="profile">Profile</a>
+    <a href="signup">Signup</a>
+    <a href="logout">Logout</a>
+{% endblock %}
 
-    <div class="container">
-        <label for="user"><strong>Username: </strong></label>
-        <input id="user" type="text"  value="{{user}}" name="user" required disabled>
-        <label for="email"><strong>E-mail</strong></label>
-        <input class="edit" id="email" type="text" value="{{email}}" name="email" required disabled>
-        <label for="pwd" ><strong>Current Password</strong></label>
-        <input class="edit" id="pwd" type="password" value="contraseña" placeholder="Current password" name="pwd" required disabled>
-        <label class="visible"  for="pwd_new" hidden><strong>Password</strong></label>
-        <input class="visible" id="pwd_new" type="password" placeholder="New password" name="pwd_new" required disabled hidden>
-        <label class="visible" for="pwd_rpt" hidden><strong>Password Repeat</strong></label>
-        <input class="visible" id="pwd_rpt" type="password" placeholder="Repet new password" name="pwd_rpt" required disabled hidden>
+{% block title %}User profile{% endblock %}
 
-        <button id="edit_btn" type="submit">Edit password & e-mail</button>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-        <a href='/logout'>
-            <button type="button" class="cancelbtn">Logout</button>
-        </a>
-    </div>
-</form>
+
+{% block form %}
+
+
+    <form id="form">
+        {% block imagen %}
+            {{ super() }}
+        {% endblock %}
+
+        <div class="container">
+            <label for="user"><strong>Username: </strong></label>
+            <input id="user" type="text" value="{{ user }}" name="user" required disabled>
+            <label for="email"><strong>E-mail</strong></label>
+            <input class="edit" id="email" type="text" value="{{ email }}" name="email" required disabled>
+            <label for="pwd"><strong>Current Password</strong></label>
+            <input class="edit" id="pwd" type="password" value="contraseña" placeholder="Current password" name="pwd"
+                   required disabled>
+            <label class="visible" for="pwd_new" hidden><strong>Password</strong></label>
+            <input class="visible" id="pwd_new" type="password" placeholder="New password" name="pwd_new" required
+                   disabled hidden>
+            <label class="visible" for="pwd_rpt" hidden><strong>Password Repeat</strong></label>
+            <input class="visible" id="pwd_rpt" type="password" placeholder="Repet new password" name="pwd_rpt" required
+                   disabled hidden>
+
+            <button id="edit_btn" type="submit">Edit password & e-mail</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <a href='/logout'>
+                <button type="button" class="cancelbtn">Logout</button>
+            </a>
+        </div>
+    </form>
 {% endblock %}

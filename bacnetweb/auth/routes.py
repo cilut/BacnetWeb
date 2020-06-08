@@ -28,13 +28,13 @@ def show_signup_form():
 
 @auth.route("/signedup", methods=["POST"])
 def signedup():
-    name = request.form.get("users")
+    name = request.form.get("user")
     email = request.form.get("email")
     pwd = request.form.get("pwd")
     usr_db = User.query.filter_by(usr=name).first()
     if usr_db is not None:
         return jsonify({"success": False})
-    usr = User(usr=name, password=generate_password_hash(pwd, "sha256"), email=email)
+    usr = User(usr=name, password=generate_password_hash(pwd, "sha256"), email=email, admin=False)
     db.session.add(usr)
     db.session.commit()
     return jsonify({"success": True})

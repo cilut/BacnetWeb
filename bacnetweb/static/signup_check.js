@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#form').onsubmit = () => {
         // Initialize new request
         const request = new XMLHttpRequest();
-        const user = document.querySelector('#users').value;
+        const user = document.querySelector('#user').value;
         const email = document.querySelector('#email').value;
         const pwd = document.querySelector('#pwd').value;
         const pwd_rpt = document.querySelector('#pwd_rpt').value;
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = "/";
                 return true;
             } else {
-                alert("Pruebe otro nombre de usuario.");
+                alert("User already in use");
                 document.querySelector('#users').value = '';
                 return false;
             }

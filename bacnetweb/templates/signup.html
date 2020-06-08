@@ -1,35 +1,39 @@
 {% extends "layout.html" %}
+{% import "macros.html" as macros %}
 
 {% block js_script %}
     <script src="{{ url_for('static', filename='signup_check.js') }}"></script>
-
 {% endblock %}
 
-{% block body %}
-<h2>Register Form</h2>
+{% block lateral_panel%}
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Login</a>
+    <a href="signup">Signup</a>
+{% endblock %}
 
-<form id="form">
-    <div class="imgcontainer">
-        <img src="{{ url_for('static', filename='img_avatar2.png') }}" alt="Avatar" class="avatar">
-    </div>
+{% block title %}Register Form{% endblock %}
 
-    <div class="container">
-        <label for="user"><strong>Username</strong></label>
-        <input id="user" type="text" placeholder="Enter Username" name="user" required>
-        <label for="email"><strong>E-mail</strong></label>
-        <input id="email" type="text" placeholder="email" name="email" required>
+{% block form %}
 
-        <label for="pwd"><strong>Password</strong></label>
-        <input id="pwd" type="password" placeholder="Enter Password" name="pwd" required>
-        <label for="pwd_rpt"><strong>Password</strong></label>
-        <input id="pwd_rpt" type="password" placeholder="Enter Password" name="pwd_rpt" required>
+    <form id="form">
 
-        <button id="submit_btn" type="submit">Register</button>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-        <a href='/'>
-            <button type="button" class="cancelbtn">Cancel</button>
-        </a>
-    </div>
-</form>
+        {% block imagen %}
+            {{ super() }}
+        {% endblock %}
+
+        <div class="container">
+            {{ macros.input('user', 'Username', 'Enter Username', 'text') }}
+            {{ macros.input('email', 'Email', 'Enter Email', 'text') }}
+
+            {{ macros.input('pwd', 'Password', 'Enter Password', 'password') }}
+            {{ macros.input('pwd_rpt','Repeat password', 'Repeat password', 'password') }}
+
+            <button id="submit_btn" type="submit">Register</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <a href='/'>
+                <button type="button" class="cancelbtn">Cancel</button>
+            </a>
+        </div>
+    </form>
 {% endblock %}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Servidor_TFG">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Servidor_TFG">
     <serverData>
       <paths name="Servidor_TFG">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

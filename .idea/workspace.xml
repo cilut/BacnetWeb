@@ -6,42 +6,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/auth/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/auth/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/bacnet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/bacnet/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/main/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/main/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bacnetweb/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BacnetWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BacnetWeb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estructura_pagina.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Untitled 1.odg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bacnetweb/templates/macros.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/links" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picturemessage_em1qfd50.tbn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picturemessage_h1u0yq4a.iyk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picturemessage_hrd2gw2v.zew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picturemessage_ucpqifk1.mqo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/create-usuer.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/Database/create-usuer.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/create_objects.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/Database/create_objects.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img_avatar2.png" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/img_avatar2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/login_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/profile_set.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/profile_set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/reset_pass.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/reset_pass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/signup_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/new_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/new_pass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reset_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/reset_pass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/selection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/users/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/auth/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/new_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/new_pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/reset_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/reset_pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/selection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +52,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="HTML File" />
         <option value="Setup Script" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -110,6 +96,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bacnetweb/static" />
       <recent name="$PROJECT_DIR$/bacnetweb" />
@@ -117,27 +106,9 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/auth" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
   </component>
   <component name="RunManager" selected="Flask server.Flask (run.py)">
     <configuration name="new_pass.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/bacnet-web/templates/new_pass.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Flask (__init__.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
-      <module name="BacnetWeb" />
-      <option name="target" value="$PROJECT_DIR$/__init__.py" />
-      <option name="targetType" value="PATH" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Flask (bacnetweb/__init__.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
@@ -162,7 +133,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -173,6 +144,21 @@
     <configuration name="Flask" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
       <module name="BacnetWeb" />
       <option name="target" value="$PROJECT_DIR$/bacnetweb/auth.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="BacnetWeb" />
+      <option name="target" value="$PROJECT_DIR$/__init__.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,7 +191,6 @@
         <item itemvalue="Flask server.Flask (run.py)" />
         <item itemvalue="JavaScript Debug.new_pass.html" />
         <item itemvalue="Flask server.Flask (bacnetweb/__init__.py)" />
-        <item itemvalue="Flask server.Flask (bacnetweb/auth.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +227,13 @@
       <workItem from="1590761977298" duration="4612000" />
       <workItem from="1590848405462" duration="17916000" />
       <workItem from="1590883229475" duration="2632000" />
-      <workItem from="1590919655715" duration="22573000" />
+      <workItem from="1590919655715" duration="23650000" />
+      <workItem from="1590958212353" duration="10907000" />
+      <workItem from="1591345582606" duration="600000" />
+      <workItem from="1591442284592" duration="600000" />
+      <workItem from="1591450822949" duration="4095000" />
+      <workItem from="1591458685074" duration="4639000" />
+      <workItem from="1591609640965" duration="846000" />
     </task>
     <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
       <created>1590946549880</created>
@@ -268,16 +259,16 @@
     </state>
     <state x="1035" y="195" width="800" height="684" key="#Deployment/0.27.1920.1013@0.27.1920.1013" timestamp="1590583727065" />
     <state x="2162" y="25" width="800" height="689" key="#Deployment/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944484936" />
-    <state x="2535" y="169" width="800" height="689" key="#Inspections" timestamp="1590943409191">
+    <state x="2535" y="164" width="800" height="689" key="#Inspections" timestamp="1590969419947">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1035" y="195" width="800" height="684" key="#Inspections/0.27.1920.1013@0.27.1920.1013" timestamp="1590449608386" />
-    <state x="2535" y="169" width="800" height="689" key="#Inspections/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590943409191" />
-    <state x="2650" y="317" width="636" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590866342281">
+    <state x="2535" y="164" width="800" height="689" key="#Inspections/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590969419947" />
+    <state x="2650" y="312" width="636" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590966931636">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1150" y="338" width="636" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1013@0.27.1920.1013" timestamp="1590583428658" />
-    <state x="2650" y="317" width="636" height="402" key="#com.intellij.fileTypes.FileTypeChooser/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590866342281" />
+    <state x="2650" y="312" width="636" height="402" key="#com.intellij.fileTypes.FileTypeChooser/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590966931636" />
     <state x="1176" y="371" width="518" height="332" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1590584478679">
       <screen x="0" y="27" width="1920" height="1013" />
     </state>
@@ -295,10 +286,11 @@
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1865" y="73" width="1185" height="924" key="CommitChangelistDialog2/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590946549636" />
-    <state x="1511" y="22" width="1712" height="874" key="DirDiffDialog" timestamp="1590945331514">
-      <screen x="1500" y="0" width="1920" height="1080" />
+    <state x="11" y="48" width="1712" height="820" key="DirDiffDialog" timestamp="1591461551668">
+      <screen x="0" y="27" width="1920" height="1013" />
     </state>
-    <state x="1511" y="22" width="1712" height="874" key="DirDiffDialog/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590945331514" />
+    <state x="11" y="48" width="1712" height="820" key="DirDiffDialog/0.27.1920.1013@0.27.1920.1013" timestamp="1591461551668" />
+    <state x="1511" y="22" width="1712" height="874" key="DirDiffDialog/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590958748804" />
     <state x="2246" y="292" width="424" height="496" key="FileChooserDialogImpl" timestamp="1590851320852">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
