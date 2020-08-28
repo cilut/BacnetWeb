@@ -1,43 +1,44 @@
-from flask import render_template, request, Blueprint, redirect, url_for, jsonify
-from flask_login import login_user, login_required, logout_user
+from flask import render_template, request, Blueprint, redirect, url_for, jsonify, flash
+from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from bacnetweb import db
+from bacnetweb.forms.routes import LoginForm, SignupForm
+
 from bacnetweb.models import User
 
 auth = Blueprint('auth', __name__)
 
 
-@auth.route("/login", methods=["POST"])
+@auth.route('/login', methods=['GET', 'POST'])
 def login():
-    # Get form information.
-    name = request.form.get("user")
-    pwd = request.form.get("pwd")
-    remember = request.form.get("remember")
-    usr = User.query.filter_by(usr=name).first()
-    if usr is not None and check_password_hash(usr.password, pwd):
-        login_user(usr, remember=remember)
-        return jsonify({"success": True})
-    return jsonify({"success": False})
+    if current_user.is_authenticated:
+        return redirect(url_for('users.profile'))
+    form = LoginForm()
+
+    if form.validate_on_submit():
+        usr = User.query.filter_by(usr=form.username.data).first()
+        if usr and check_password_hash(usr.password, form.password.data):
+            login_user(usr, remember=form.remember.data)
+            flash('You have been logged in!', 'success')
+            return redirect(url_for('users.profile'))
+        else:
+            flash('Login Unsuccessful. Please check username and password', 'danger')
+    return render_template("login/login.html", title='Login', form=form)
 
 
-@auth.route("/signup")
-def show_signup_form():
-    return render_template("signup.html")
-
-
-@auth.route("/signedup", methods=["POST"])
-def signedup():
-    name = request.form.get("user")
-    email = request.form.get("email")
-    pwd = request.form.get("pwd")
-    usr_db = User.query.filter_by(usr=name).first()
-    if usr_db is not None:
-        return jsonify({"success": False})
-    usr = User(usr=name, password=generate_password_hash(pwd, "sha256"), email=email, admin=False)
-    db.session.add(usr)
-    db.session.commit()
-    return jsonify({"success": True})
+@auth.route("/signup", methods=['GET', 'POST'])
+def signup():
+    if current_user.is_authenticated:
+        return redirect(url_for('users.profile'))
+    form = SignupForm()
+    if form.validate_on_submit():
+        usr = User(usr=form.username.data, password=generate_password_hash(form.password.data, "sha256"), email=form.email.data, admin=False)
+        db.session.add(usr)
+        db.session.commit()
+        flash(f'Account created for {form.username.data}', 'success')
+        return redirect(url_for('auth.login'))
+    return render_template('signup/signup.html', title='Signup', form=form)
 
 
 @auth.route('/logout')

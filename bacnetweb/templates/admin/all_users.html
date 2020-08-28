@@ -1,0 +1,67 @@
+{% extends "auxiliar/layout.html" %}
+{% block content %}
+    <div class="form-group">
+        <a href="{{ url_for('admin.register_user') }}">
+            <button class="btn btn-outline-info">Register User</button>
+        </a>
+    </div>
+    <div class="form-group">
+        <a href="{{ url_for('admin.register_schedule') }}">
+            <button class="btn btn-outline-info">Register Schedule</button>
+        </a>
+    </div>
+    <div class="form-group">
+        <a href="{{ url_for('admin.register_alarm') }}">
+            <button class="btn btn-outline-info">Register Alarm</button>
+        </a>
+    </div>
+    <div class="form-group">
+        <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
+               placeholder="Search..">
+    </div>
+
+    <table style="width:100%;margin-left:auto;margin-right:auto;" class="sortable-theme-light order-table"
+           data-sortable>
+        <thead>
+        <tr>
+            <th data-sortable="false" data-sorted="false"></th>
+            <th data-sorted="true" data-sorted-direction="descending">Username</th>
+            <th data-sorted="false">Email</th>
+            <th data-sorted="false">Administrator</th>
+        </tr>
+        </thead>
+
+        {% for user in users %}
+            <tr>
+                <td>
+                    <a href="{{ url_for('admin.update_user', user_id=user.id) }}">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                    <a href="{{ url_for('admin.delete_user', user_id=user.id) }}">
+                        <i class="fas fa-trash"
+                           onclick="return confirm('Are you sure you want to delete this record?');"></i>
+                    </a>
+                    <a href="{{ url_for('admin.user_schedules', user_id=user.id) }}">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                    </a>
+                    <a href="{{ url_for('admin.user_alarms', user_id=user.id) }}">
+                         <i class="fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ url_for('admin.update_user', user_id=user.id) }}">
+                        <i>{{ user.usr }}</i>
+                    </a>
+                </td>
+                <td>{{ user.email }}</td>
+                <td>
+                    {% if user.admin %}
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    {% else %}
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

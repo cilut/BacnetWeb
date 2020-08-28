@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#pwd_rpt').style.backgroundColor = '#ffffff';
             return false;
         }
-        request.open('POST', '/signedup');
+        request.open('POST', '/signup');
 
         // Callback function for when request completes
         request.onload = () => {

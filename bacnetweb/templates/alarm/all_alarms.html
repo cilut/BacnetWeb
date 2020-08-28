@@ -1,0 +1,91 @@
+{% extends "auxiliar/layout.html" %}
+{% block content %}
+    {% if user %}
+        <legend class="border-bottom mb-4">Administrator view</legend>
+        <div class="form-group">
+            <a href="{{ url_for('admin.users', user_id=user.id ) }}">
+                <button type="button" class="btn btn-outline-info">All Users</button>
+            </a>
+        </div>
+        <div class="media">
+
+            <img class="rounded-circle account-img" src="{{ url_for('static', filename='img_avatar2.png') }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.usr }}</h2>
+            </div>
+        </div>
+    {% else %}
+        <legend class="border-bottom mb-4">User view</legend>
+    {% endif %}
+
+
+
+    <div class="form-group">
+        <a href="{{ url_for('bacnet.registerAlarm') }}">
+            <button class="btn btn-outline-info">Register alarm</button>
+        </a>
+    </div>
+    <div class="form-group">
+        <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
+               placeholder="Search..">
+    </div>
+    <table style="width:100%" class="sortable-theme-light order-table" data-sortable>
+
+        <thead>
+        <tr>
+            <th data-sortable="false" data-sorted="false"></th>
+            <th data-sorted="false">Id</th>
+            <th data-sorted="true" data-sorted-direction="descending">State</th>
+            <th data-sorted="false">Event</th>
+            <th data-sorted="false">Source</th>
+            <th data-sorted="false">Source Description</th>
+        </tr>
+        </thead>
+
+        {% for alarm in alarms %}
+
+            <tr
+                    {% if alarm.state == "Active" %}
+                        class="current_active">
+                    {% else %}
+                        class="current_inactive">
+                    {% endif %}
+            <td>
+
+                {% if user %}
+                    <a href="{{ url_for('admin.update_alarm', alarm_id=alarm.id) }}">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('bacnet.updateAlarm', alarm_id=alarm.id) }}">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                {% endif %}
+
+                <a href="{{ url_for('bacnet.delete_alarm', alarm_id=alarm.id) }}">
+                    <i class="fas fa-trash"
+                       onclick="return confirm('Are you sure you want to delete this record?');"></i>
+                </a>
+            </td>
+            <td>
+                {% if user %}
+                    <a href="{{ url_for('admin.alarms', alarm_id=alarm.id, user_id=alarm.id_user) }}">
+                        <i> {{ alarm.id }}</i>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('bacnet.updateAlarm', alarm_id=alarm.id) }}">
+                        <i> {{ alarm.id }} </i>
+                    </a>
+                {% endif %}
+
+
+            </td>
+            <td>{{ alarm.state }}</td>
+            <td>{{ alarm.event }}</td>
+            <td>{{ alarm.source }}</td>
+            <td>{{ alarm.source_description }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock content %}

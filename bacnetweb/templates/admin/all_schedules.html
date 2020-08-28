@@ -1,0 +1,83 @@
+{% extends "auxiliar/layout.html" %}
+{% block content %}
+
+    <legend class="border-bottom mb-4">Administrator view</legend>
+
+
+
+    <div class="form-group">
+        <a href="{{ url_for('admin.register_schedule') }}">
+            <button class="btn btn-outline-info">Register Schedule</button>
+        </a>
+    </div>
+
+    <div class="form-group">
+        <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text"
+               placeholder="Search..">
+    </div>
+    <table style="width:100%" class="sortable-theme-light order-table" data-sortable>
+
+        <thead>
+        <tr>
+            <th data-sortable="false" data-sorted="false"></th>
+            <th data-sorted="true" data-sorted-direction="descending">Object ID</th>
+            <th data-sorted="false">Object Name</th>
+            <th data-sorted="false">Object Type</th>
+            <th data-sorted="false">Present Value</th>
+            <th data-sorted="false">Description</th>
+            <th data-sorted="false">User</th>
+        </tr>
+        </thead>
+
+        {% for schedule in schedules %}
+            <tr>
+                <td>
+
+                    {% if admin %}
+                        <a href="{{ url_for('admin.schedule', schedule_id=schedule.id, user_id=schedule.id_user) }}">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('bacnet.schedule', schedule_id=schedule.id) }}">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                    {% endif %}
+
+                    <a href="{{ url_for('bacnet.delete_schedule', schedule_id=schedule.id) }}">
+                        <i class="fas fa-trash"
+                           onclick="return confirm('Are you sure you want to delete this record?');"></i>
+                    </a>
+                </td>
+                <td>
+                    {% if admin %}
+                        <a href="{{ url_for('admin.schedule', schedule_id=schedule.id, user_id=schedule.id_user) }}">
+                            <i> {{ schedule.object_identifier }}</i>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('bacnet.schedule', schedule_id=schedule.id) }}">
+                            <i> {{ schedule.object_identifier }} </i>
+                        </a>
+                    {% endif %}
+
+
+                </td>
+                <td>{{ schedule.object_name }}</td>
+                <td>{{ schedule.object_type }}</td>
+                <td>{{ schedule.present_value }}</td>
+                <td>{{ schedule.description }}</td>
+                {% if users %}
+                    {% for user in users %}
+                        {% if schedule.id_user == user.id %}
+                            <td>
+                                <a href="{{ url_for('admin.update_user', user_id=user.id) }}">
+                                    <i>{{ user.usr }}</i>
+                                </a>
+                            </td>
+
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

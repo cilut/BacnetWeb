@@ -1,0 +1,145 @@
+{% extends "auxiliar/layout.html" %}
+{% block content %}
+
+    {% if user %}
+        <legend class="border-bottom mb-4">Administrator view</legend>
+        <div class="form-group">
+            <a href="{{ url_for('admin.schedules')  }}">
+                <button type="button" class="btn btn-outline-info">All Schedules</button>
+            </a>
+        </div>
+        <div class="form-group">
+            <a href="{{ url_for('admin.user_schedules', user_id=schedule.id_user ) }}">
+                <button type="button" class="btn btn-outline-info">All User Schedules</button>
+            </a>
+        </div>
+        <article class="media content-section">
+
+            <div class="media-body">
+                <legend class="border-bottom mb-4">Schedule data</legend>
+                <h2><a class="article-title">{{ schedule.object_name }}</a></h2>
+                <a>{{ schedule.object_identifier }}</a>
+                <a>{{ schedule.object_type }}</a>
+                <a>{{ schedule.out_of_service }}</a>
+                <div class="form-group">
+                    <a href="{{ url_for('admin.update_schedule', id_user=schedule.id_user, schedule_id=schedule.id ) }}">
+                        <button type="button" class="btn btn-outline-success">Edit Schedule</button>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    {% else %}
+        <legend class="border-bottom mb-4">User view</legend>
+        <article class="media content-section">
+
+            <div class="media-body">
+                <legend class="border-bottom mb-4">Schedule data</legend>
+                <h2><a class="article-title">{{ schedule.object_name }}</a></h2>
+                <a>{{ schedule.object_identifier }}</a>
+                <a>{{ schedule.object_type }}</a>
+                <a>{{ schedule.out_of_service }}</a>
+                <div class="form-group">
+                    <a href="{{ url_for('bacnet.updateSchedule', schedule_id=schedule.id ) }}">
+                        <button type="button" class="btn btn-outline-success">Edit Schedule</button>
+                    </a>
+                </div>
+                <div class="form-group">
+                    <a href="{{ url_for('bacnet.add_daily', schedule_id=schedule.id) }}">
+                        <button class="btn btn-outline-info">Register Daily Schedual</button>
+                    </a>
+                </div>
+                <div class="form-group">
+                    <a href="{{ url_for('bacnet.add_special', schedule_id=schedule.id) }}">
+                        <button class="btn btn-outline-info">Special Event Schedual</button>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+
+    {% endif %}
+
+
+
+    <div class="content-section">
+        <legend class="border-bottom mb-4">Special Events</legend>
+
+        <table style="width:100%">
+            <tr>
+                <th></th>
+                <th>Day</th>
+                <th>Initial Time</th>
+                <th>Final Time</th>
+                <th>Value</th>
+            </tr>
+
+            {% for special_sch in special_days %}
+
+                <tr>
+                    <td>
+                        <a href="{{ url_for('bacnet.update_daily', schedule_id=schedule.id, daily_id=special_sch.id) }}">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                        <a href="{{ url_for('bacnet.delete_daily', schedule_id=schedule.id, daily_id=special_sch.id) }}">
+                            <i class="fas fa-trash"
+                               onclick="return confirm('Are you sure you want to delete this record?');"></i>
+                        </a>
+                    </td>
+                    <td>{{ special_sch.day }}</td>
+                    <td>{{ special_sch.initial_time }}</td>
+                    <td>{{ special_sch.final_time }}</td>
+                    <td>{{ special_sch.value }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+
+    </div>
+
+    {% for day in days %}
+
+        <div class="content-section">
+
+            <div class="content-section">
+                <legend class="border-bottom mb-4">{{ day }}</legend>
+
+                <table style="width:100%">
+                    <tr>
+                        <th></th>
+                        <th>Initial Time</th>
+                        <th>Final Time</th>
+                        <th>Value</th>
+                    </tr>
+
+                    {% for day_sch in daily_schedules %}
+                        {% if day_sch.day == day %}
+                            <tr>
+                                <td>
+                                    <a href="{{ url_for('bacnet.update_daily', schedule_id=schedule.id, daily_id=day_sch.id) }}">
+                                        <i class="fas fa-pen"></i>
+                                    </a>
+                                    <a href="{{ url_for('bacnet.delete_daily', schedule_id=schedule.id, daily_id=day_sch.id) }}">
+                                        <i class="fas fa-trash"
+                                           onclick="return confirm('Are you sure you want to delete this record?');"></i>
+                                    </a>
+                                </td>
+                                <td>{{ day_sch.initial_time }}</td>
+                                <td>{{ day_sch.final_time }}</td>
+                                <td>{{ day_sch.value }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+    {% endfor %}
+
+
+{% endblock content %}

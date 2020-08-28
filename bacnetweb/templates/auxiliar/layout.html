@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bacnet Administrator Web</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sortable-theme-light.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='sortable.min.js') }}"></script>
+    <script type="text/javascript">
+        (function (document) {
+            'use strict';
+
+            var LightTableFilter = (function (Arr) {
+
+                var _input;
+
+                function _onInputEvent(e) {
+                    _input = e.target;
+                    var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+                    Arr.forEach.call(tables, function (table) {
+                        Arr.forEach.call(table.tBodies, function (tbody) {
+                            Arr.forEach.call(tbody.rows, _filter);
+                        });
+                    });
+                }
+
+                function _filter(row) {
+                    var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+                    row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+                }
+
+                return {
+                    init: function () {
+                        var inputs = document.getElementsByClassName('light-table-filter');
+                        Arr.forEach.call(inputs, function (input) {
+                            input.oninput = _onInputEvent;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function () {
+                if (document.readyState === 'complete') {
+                    LightTableFilter.init();
+                }
+            });
+
+        })(document);
+        {% block  js_script %}
+
+        {% endblock %}
+
+
+    </script>
+    {% if title %}
+        <title>Bacnet Admin - {{ title }}</title>
+    {% else %}
+        <title>Bacnet Admin </title>
+    {% endif %}
+
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="/">Bacnet Admin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="{{ url_for('main.index') }}">Home</a>
+                    <a class="nav-item nav-link" href="{{ url_for('users.about') }}">About</a>
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                    {% if current_user.is_authenticated %}
+
+                        <select class="navbar navbar-expand-md navbar-dark bg-steel nav-item nav-link"
+                                onchange="location = this.value;">
+                            <option class="nav-item nav-link" value="">Register Object</option>
+                            <option class="nav-item nav-link" value="{{ url_for('bacnet.registerSchedule') }}">
+                                Schedule
+                            </option>
+                            <option class="nav-item nav-link" value="{{ url_for('bacnet.registerAlarm') }}">
+                                Alarm
+                            </option>
+                        </select>
+                        <a class="nav-item nav-link" href="{{ url_for('users.profile') }}">Account</a>
+                        <a class="nav-item nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{{ url_for('auth.login') }}">Login</a>
+                        <a class="nav-item nav-link" href="{{ url_for('auth.signup') }}">Register</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+        {% if current_user.is_authenticated %}
+
+            <div class="col-md-4">
+                {% if current_user.admin %}
+                    <div class="content-section">
+                        <h3>Administrator</h3>
+                        <p class='text-muted'>All the user and objects available.
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">
+                                <a class="nav-item nav-link" href="{{ url_for('admin.users') }}">All Users</a>
+                            </li>
+                            <li class="list-group-item list-group-item-light">
+                                <a class="nav-item nav-link" href="{{ url_for('admin.schedules') }}">All Weekly
+                                    Schedule</a>
+                            </li>
+
+                            <li class="list-group-item list-group-item-light">
+                                <a class="nav-item nav-link" href="{{ url_for('admin.alarms') }}">All Alarms</a>
+                            </li>
+
+                        </ul>
+                        </p>
+                    </div>
+                {% endif %}
+
+                <div class="content-section">
+                    <h3>Bacnet Objects</h3>
+                    <p class='text-muted'>All the bacnet objects able to administrate the current user.
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-light">
+                            <a class="nav-item nav-link" href="{{ url_for('bacnet.schedules') }}">Weekly
+                                Schedule</a>
+                        </li>
+                        <li class="list-group-item list-group-item-light">
+                            <a class="nav-item nav-link" href="{{ url_for('bacnet.alarms') }}">Alarms</a>
+                        </li>
+
+                    </ul>
+                    </p>
+
+                </div>
+
+            </div>
+        {% endif %}
+    </div>
+</main>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

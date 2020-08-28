@@ -61,6 +61,10 @@ img.avatar {
   border-radius: 50%;
 }
 
+img.struct {
+  width: 70%;
+}
+
 /* Add padding to containers */
 .container {
   padding: 16px;
@@ -69,7 +73,6 @@ img.avatar {
 /* The "Forgot password" text */
 span.psw {
   float: right;
-  padding-top: 16px;
 }
 
 .sidenav {

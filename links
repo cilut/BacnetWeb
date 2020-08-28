@@ -24,7 +24,7 @@ Tutorial enviar emails:
 		6.https://video.cs50.io/ZRV7JCXAFTs?screen=Y4dz5LJLPB4
 		
 		
-		Concetor postgres pythobn:
+		Concetor postgres python:
 			https://pypi.org/project/psycopg2-binary/
 		
 		How to import export a data base on  postgres:
@@ -42,3 +42,11 @@ Structing a flask aplication:
 	https://www.youtube.com/watch?v=44PvX0Yv368&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=5
 
 
+Instalar flask-user rastberry, fallos:
+    https://github.com/scrapy/scrapy/issues/2115
+
+Level access creating my own decorator
+    https://blog.tecladocode.com/learn-python-defining-user-access-roles-in-flask/
+
+Buscador en tablas
+    https://www.tutofox.com/javascript/buscador-datos-en-la-tabla-con-javascript/

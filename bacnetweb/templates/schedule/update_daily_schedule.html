@@ -1,0 +1,73 @@
+{% extends "auxiliar/layout.html" %}
+{% block content %}
+    <div class="content-section ">
+        <form class="col-md-12" method="POST" action="">
+            {{ form.hidden_tag() }}
+
+            <fieldset class="form-group ">
+                <legend class="border-bottom mb-4">Update Daily Schedule</legend>
+
+                <div class="form-group col-6">
+                    {{ form.day.label(class="form-control-label") }}
+
+                    {% if form.day.errors %}
+                        {{ form.day(class="form-control form-control-lg is-invalid", placeholder= current_daily_sch.day) }}
+                        <div class="invalid-feedback">
+                            {% for error in form.day.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.day(class="form-control form-control-lg", placeholder= current_daily_sch.day) }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group col-6">
+                    {{ form.initial_time.label(class="form-control-label", placeholder= current_daily_sch.initial_time) }}
+                    {% if form.initial_time.errors %}
+                        {{ form.initial_time(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.initial_time.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.initial_time(class="form-control form-control-lg", placeholder= current_daily_sch.initial_time) }}
+                    {% endif %}
+                </div>
+                <div class="form-group col-6 ">
+                    {{ form.final_time.label(class="form-control-label", placeholder= current_daily_sch.final_time) }}
+                    {% if form.final_time.errors %}
+                        {{ form.final_time(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.final_time.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.final_time(class="form-control form-control-lg", placeholder= current_daily_sch.final_time) }}
+                    {% endif %}
+                </div>
+                <div class="form-group col-6">
+                    {{ form.value.label(class="form-control-label", placeholder= current_daily_sch.value) }}
+                    {% if form.value.errors %}
+                        {{ form.value(class="form-control form-control-lg is-invalid", placeholder= current_daily_sch.value)  }}
+                        <div class="invalid-feedback">
+                            {% for error in form.value.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.value(class="form-control form-control-lg", placeholder= current_daily_sch.value) }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+
+
+{% endblock content %}

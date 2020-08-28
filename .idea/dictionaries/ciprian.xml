@@ -2,6 +2,12 @@
   <dictionary name="ciprian">
     <words>
       <w>bacnet</w>
+      <w>navbar</w>
+      <w>offnormal</w>
+      <w>schedual</w>
+      <w>tablename</w>
+      <w>toggler</w>
+      <w>visto</w>
     </words>
   </dictionary>
 </component>

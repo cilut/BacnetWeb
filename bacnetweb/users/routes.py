@@ -1,69 +1,71 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash
 from flask_login import login_required, current_user
+
 from flask_mail import Message
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from bacnetweb import mail, db
 from bacnetweb.models import User
 
-users = Blueprint("users", __name__)
+from bacnetweb.forms.routes import UpdateForm, ResetPassForm, ChangePassForm
+
+users = Blueprint('users', __name__)
 
 
-@users.route("/profile", methods=["GET"])
+@users.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('auxiliar/about.html')
+
+
+@users.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
-    user_log = current_user
-    return render_template("profile.html", user=user_log.usr, email=user_log.email)
+    form = UpdateForm()
+    if form.validate_on_submit():
+        if check_password_hash(current_user.password, form.password.data):
+            current_user.password = generate_password_hash(form.password_new.data, "sha256")
+            current_user.email = form.email.data
+            db.session.add(current_user)
+            db.session.commit()
+            flash(f'Account updated for {current_user.usr}', 'success')
+            return render_template('user/profile.html', title='Account', form=form)
+        else:
+            flash('Update unsuccessful. Please check password', 'danger')
+    return render_template('user/profile.html', title='Account', form=form)
 
 
-@users.route("/update", methods=["POST"])
-@login_required
-def update():
-    # Get form information.
-    name = request.form.get("users")
-    pwd = request.form.get("pwd")
-    pwd_new = request.form.get("pwd_new")
-    email = request.form.get("email")
-    usr = User.query.filter_by(usr=name).first()
-    if usr is not None and check_password_hash(usr.password, pwd):
-        usr.password = generate_password_hash(pwd_new, "sha256")
-        usr.email = email
-        db.session.commit()
-        return jsonify({"success": True}, )
-    return jsonify({"success": False})
-
-
-@users.route("/reset_pass")
+@users.route("/reset_pass", methods=['GET', 'POST'])
 def reset_pass():
-    return render_template("reset_pass.html")
+    form = ResetPassForm()
 
-
-@users.route("/send_email", methods=["POST"])
-def send_email():
-    email = request.form.get("email")
-    usr = User.query.filter_by(email=email).first()
-    if usr is None:
-        return redirect(url_for("main .index"))
-    token = usr.get_reset_token()
-    msg = Message("Password Reset Request",
-                  sender="cipri686@gmail.com",
-                  recipients=[email])
-    msg.body = f''' To reset your password, visit the following link:
+    if form.validate_on_submit():
+        usr = User.query.filter_by(email=form.email.data, usr=form.username.data).first()
+        if usr is None:
+            flash(f'If there is an account that matches the user and the email check your mailbox ', 'success')
+            return redirect(url_for("main.index"))
+        token = usr.get_reset_token()
+        msg = Message("Password Reset Request",
+                      sender="cipri686@gmail.com",
+                      recipients=[form.email.data])
+        msg.body = f''' To reset your password, visit the following link:
 {url_for('users.new_pass', token=token, _external=True)}
 If you did not request this email then simply ignore this email.
-    '''
-    mail.send(msg)
-    return redirect(url_for("main.index"))
+            '''
+        mail.send(msg)
+        flash(f'If there is an account that matches the user and the email check your mailbox ', 'success')
+        return redirect(url_for("main.index"))
+    return render_template("signup/reset_pass.html", form=form)
 
 
 @users.route("/new_pass/<token>", methods=['GET', 'POST'])
 def new_pass(token):
     usr = User.verify_reset_token(token)
-    if request.method == 'GET':
-        if usr is None:
-            return render_template("error.html")
-        return render_template("new_pass.html", token=token)
-    pwd_new = request.form.get("pwd_new")
-    usr.password = generate_password_hash(pwd_new, "sha256")
-    db.session.commit()
-    return redirect(url_for("main.index"))
+    form = ChangePassForm()
+    if form.validate_on_submit():
+        usr.password = generate_password_hash(form.password_new.data, "sha256")
+        db.session.add(usr)
+        db.session.commit()
+        flash(f'Password updated properly for user:  {usr.usr}', 'success')
+        return redirect(url_for("main.index"))
+    return render_template('signup/new_pass.html', title='Account', form=form)
+

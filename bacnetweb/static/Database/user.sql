@@ -6,4 +6,4 @@ CREATE TABLE users (
 );
 
 ALTER TABLE users
-ADD COLUMN admin BOOLEAN;
+ADD COLUMN email_confirmed_at VARCHAR;

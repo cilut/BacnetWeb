@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/bacnetweb/bacnet" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bacnetweb/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bacnetweb/users" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bacnetweb/forms" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../bacnet-web/env" />
       <excludeFolder url="file://$MODULE_DIR$/../bacnet-web/venv" />
     </content>

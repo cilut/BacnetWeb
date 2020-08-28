@@ -1,0 +1,367 @@
+{% extends "auxiliar/layout.html" %}
+{% block content %}
+    {% if user or admin %}
+        <legend class="border-bottom mb-4">Administrator view</legend>
+    {% endif %}
+    <div class="content-section ">
+        <form class="col-md-12" method="POST" action="">
+            {{ form.hidden_tag() }}
+
+
+            <fieldset class="form-group ">
+                {% if schedule %}
+                    <legend class="border-bottom mb-4">Update Schedule</legend>
+                {% else %}
+                    <legend class="border-bottom mb-4">Register Schedule</legend>
+                {% endif %}
+                {% if admin %}
+                    <div class="row justify-content-center">
+                        <div class="form-group col-6">
+                            {{ form.id_user.label(class="form-control-label") }}
+                            <select class="form-control form-control-lg" id="id_user" name="id_user">
+                                {% for c_user in users %}
+                                    <option value="{{ c_user.usr }}">{{ c_user.usr }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+                {% if user %}
+                    <div class="row justify-content-center">
+                        <div class="form-group col-6">
+                            {{ form.id_user.label(class="form-control-label") }}
+                            {% if form.id_user.errors %}
+                                {% if schedule %}
+                                    {{ form.id_user(class="form-control form-control-lg is-invalid", value=user.usr) }}
+                                {% else %}
+                                    {{ form.id_user(class="form-control form-control-lg is-invalid") }}
+                                {% endif %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.id_user.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {% if schedule %}
+                                    <select class="form-control form-control-lg" id="id_user" name="id_user">
+                                        {% for c_user in users %}
+                                            {% if c_user.usr == user.usr %}
+                                                <option value="{{ c_user.usr }}" selected>{{ c_user.usr }}</option>
+                                            {% else %}
+                                                <option value="{{ c_user.usr }}">{{ c_user.usr }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                {% else %}
+                                    {{ form.id_user(class="form-control form-control-lg") }}
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.object_identifier.label(class="form-control-label") }}
+
+
+                        {% if form.object_identifier.errors %}
+                            {% if schedule %}
+                                {{ form.object_identifier(class="form-control form-control-lg is-invalid", value=schedule.object_identifier, readonly=true) }}
+                            {% else %}
+                                {{ form.object_identifier(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.object_identifier.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.object_identifier(class="form-control form-control-lg", value=schedule.object_identifier, readonly=true) }}
+                            {% else %}
+                                {{ form.object_identifier(class="form-control form-control-lg") }}
+                            {% endif %}
+
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.object_name.label(class="form-control-label") }}
+                        {% if form.object_name.errors %}
+                            {% if schedule %}
+                                {{ form.prop(class="form-control form-control-lg is-invalid", value=schedule.object_name) }}
+                            {% else %}
+                                {{ form.object_name(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.object_name.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.object_name(class="form-control form-control-lg", value=schedule.object_name) }}
+                            {% else %}
+                                {{ form.object_name(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-group col-6 ">
+                        {{ form.object_type.label(class="form-control-label") }}
+                        {% if form.object_type.errors %}
+                            {% if schedule %}
+                                {{ form.object_type(class="form-control form-control-lg is-invalid", value=schedule.object_type) }}
+                            {% else %}
+                                {{ form.object_type(class="form-control form-control-lg is-invalid" ) }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.object_type.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.object_type(class="form-control form-control-lg", value=schedule.object_type) }}
+                            {% else %}
+                                {{ form.object_type(class="form-control form-control-lg") }}
+                            {% endif %}
+
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.present_value.label(class="form-control-label") }}
+                        {% if form.present_value.errors %}
+                            {% if schedule %}
+                                {{ form.present_value(class="form-control form-control-lg is-invalid", value=schedule.present_value) }}
+                            {% else %}
+                                {{ form.present_value(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.present_value.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.present_value(class="form-control form-control-lg", value=schedule.present_value) }}
+                            {% else %}
+                                {{ form.present_value(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.description.label(class="form-control-label") }}
+                        {% if form.description.errors %}
+                            {% if schedule %}
+                                {{ form.description(class="form-control form-control-lg is-invalid", value=schedule.description) }}
+                            {% else %}
+                                {{ form.description(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.description.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.description(class="form-control form-control-lg", value=schedule.description) }}
+                            {% else %}
+                                {{ form.description(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.effective_period.label(class="form-control-label") }}
+                        {% if form.effective_period.errors %}
+                            {% if schedule %}
+                                {{ form.effective_period(class="form-control form-control-lg is-invalid", value=schedule.effective_period) }}
+                            {% else %}
+                                {{ form.effective_period(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.effective_period.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.effective_period(class="form-control form-control-lg", value=schedule.effective_period) }}
+                            {% else %}
+                                {{ form.effective_period(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.exception_schedule.label(class="form-control-label") }}
+                        {% if form.exception_schedule.errors %}
+                            {% if schedule %}
+                                {{ form.exception_schedule(class="form-control form-control-lg is-invalid", value=schedule.exception_schedule) }}
+                            {% else %}
+                                {{ form.exception_schedule(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.exception_schedule.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.exception_schedule(class="form-control form-control-lg", value=schedule.exception_schedule) }}
+                            {% else %}
+                                {{ form.exception_schedule(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.list_of_object_property_references.label(class="form-control-label") }}
+                        {% if form.list_of_object_property_references.errors %}
+                            {% if schedule %}
+                                {{ form.list_of_object_property_references(class="form-control form-control-lg is-invalid", value=schedule.list_of_object_property_references) }}
+                            {% else %}
+                                {{ form.list_of_object_property_references(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.list_of_object_property_references.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.list_of_object_property_references(class="form-control form-control-lg", value=schedule.list_of_object_property_references) }}
+                            {% else %}
+                                {{ form.list_of_object_property_references(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.priority_for_writing.label(class="form-control-label") }}
+                        {% if form.priority_for_writing.errors %}
+                            {% if schedule %}
+                                {{ form.priority_for_writing(class="form-control form-control-lg is-invalid", value=schedule.priority_for_writing) }}
+                            {% else %}
+                                {{ form.priority_for_writing(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.priority_for_writing.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.priority_for_writing(class="form-control form-control-lg", value=schedule.priority_for_writing) }}
+                            {% else %}
+                                {{ form.priority_for_writing(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.status_flags.label(class="form-control-label") }}
+                        {% if form.status_flags.errors %}
+                            {% if schedule %}
+                                {{ form.status_flags(class="form-control form-control-lg is-invalid", value=schedule.status_flags) }}
+                            {% else %}
+                                {{ form.status_flags(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.status_flags.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.status_flags(class="form-control form-control-lg", value=schedule.status_flags) }}
+                            {% else %}
+                                {{ form.status_flags(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.reliability.label(class="form-control-label") }}
+                        {% if form.reliability.errors %}
+                            {% if schedule %}
+                                {{ form.reliability(class="form-control form-control-lg is-invalid", value=schedule.reliability) }}
+                            {% else %}
+                                {{ form.reliability(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.reliability.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if schedule %}
+                                {{ form.reliability(class="form-control form-control-lg", value=schedule.reliability) }}
+                            {% else %}
+                                {{ form.reliability(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
+
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-check">
+                        {% if schedule and schedule.out_of_service %}
+                            {{ form.out_of_service(class="form-check-input",checked=true) }}
+                        {% else %}
+                            {{ form.out_of_service(class="form-check-input") }}
+                        {% endif %}
+
+                        {{ form.out_of_service.label(class="form-check-label") }}
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {% if schedule %}
+                    {{ form.submit(class="btn btn-outline-info", value="Update", checked=true) }}
+                {% else %}
+                    {{ form.submit(class="btn btn-outline-info") }}
+                {% endif %}
+            </div>
+
+
+            {% if schedule %}
+                {% if user %}
+                    <div>
+                        <a href="{{ url_for('admin.schedule', user_id=user.id, schedule_id=schedule.id ) }}">
+                            <button type="button" class="btn btn-outline-danger inline">Cancel</button>
+                        </a>
+                    </div>
+                {% else %}
+                    <div>
+                        <a href="{{ url_for('bacnet.schedule', schedule_id=schedule.id) }}">
+                            <button type="button" class="btn btn-outline-danger inline">Cancel</button>
+                        </a>
+                    </div>
+                {% endif %}
+
+            {% endif %}
+            {% if admin %}
+                <div>
+                    <a href="{{ url_for('admin.users' ) }}">
+                        <button type="button" class="btn btn-outline-danger inline">Cancel</button>
+                    </a>
+                </div>
+            {% endif %}
+        </form>
+    </div>
+
+{% endblock content %}

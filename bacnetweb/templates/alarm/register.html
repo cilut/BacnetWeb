@@ -1,0 +1,278 @@
+{% extends "auxiliar/layout.html" %}
+{% block  js_script %}
+    document.getElementById("selectState").src = "landscape.jpg";
+{% endblock %}
+{% block content %}
+    {% if admin %}
+        <legend class="border-bottom mb-4">Administrator view</legend>
+        <div class="form-group">
+            <a href="{{ url_for('admin.alarms') }}">
+                <button type="button" class="btn btn-outline-info">All Alarms</button>
+            </a>
+        </div>
+
+    {% endif %}
+    <div class="content-section ">
+        <form class="col-md-12" method="POST" action="">
+            {{ form.hidden_tag() }}
+
+            <fieldset class="form-group ">
+                {% if alarm %}
+                    <legend class="border-bottom mb-4">Update alarm</legend>
+                {% else %}
+                    <legend class="border-bottom mb-4">Register alarm</legend>
+                {% endif %}
+                {% if admin %}
+                    <div class="row justify-content-center">
+                        <div class="form-group col-6">
+                            {{ form.id_user.label(class="form-control-label") }}
+                            <select class="form-control form-control-lg" id="id_user" name="id_user">
+                                {% for c_user in users %}
+                                    <option value="{{ c_user.usr }}">{{ c_user.usr }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+                {% if user %}
+                    <div class="row justify-content-center">
+                        <div class="form-group col-6">
+                            {{ form.id_user.label(class="form-control-label") }}
+                            {% if form.id_user.errors %}
+                                {% if alarm %}
+                                    {{ form.id_user(class="form-control form-control-lg is-invalid", value=user.usr) }}
+                                {% else %}
+                                    {{ form.id_user(class="form-control form-control-lg is-invalid") }}
+                                {% endif %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.id_user.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {% if alarm %}
+                                    <select class="form-control form-control-lg" id="id_user" name="id_user">
+                                        {% for c_user in users %}
+                                            {% if c_user.usr == user.usr %}
+                                                <option value="{{ c_user.usr }}" selected>{{ c_user.usr }}</option>
+                                            {% else %}
+                                                <option value="{{ c_user.usr }}">{{ c_user.usr }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                {% else %}
+                                    {{ form.id_user(class="form-control form-control-lg") }}
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="row justify-content-center">
+
+                    <div class="form-group col-6">
+                        {{ form.state.label(class="form-control-label") }}
+                        {% if form.state.errors %}
+                            {% if alarm %}
+                                <select class="form-control form-control-lg" id="state" name="state">
+                                    {% for c_state in states %}
+                                        {% if c_state == alarm.state %}
+                                            <option value="{{ c_state }}" selected>{{ c_state }}</option>
+                                        {% else %}
+                                            <option value="{{ c_state }}">{{ c_state }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                {{ form.state(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.state.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if alarm %}
+                                <select class="form-control form-control-lg" id="state" name="state">
+                                    {% for c_state in states %}
+                                        {% if c_state == alarm.state %}
+                                            <option value="{{ c_state }}" selected>{{ c_state }}</option>
+                                        {% else %}
+                                            <option value="{{ c_state }}">{{ c_state }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                {{ form.state(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6 ">
+                        {{ form.event.label(class="form-control-label") }}
+                        {% if form.event.errors %}
+                            {% if alarm %}
+                                <select class="form-control form-control-lg" id="event" name="event">
+                                    {% for c_event in events %}
+                                        {% if c_event == alarm.event %}
+                                            <option value="{{ c_event }}" selected>{{ c_event }}</option>
+                                        {% else %}
+                                            <option value="{{ c_event }}">{{ c_event }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                {{ form.event(class="form-control form-control-lg is-invalid" ) }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.event.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if alarm %}
+                                <select class="form-control form-control-lg" id="event" name="event">
+                                    {% for c_event in events %}
+                                        {% if c_event == alarm.event %}
+                                            <option value="{{ c_event }}" selected>{{ c_event }}</option>
+                                        {% else %}
+                                            <option value="{{ c_event }}">{{ c_event }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                {{ form.event(class="form-control form-control-lg") }}
+                            {% endif %}
+
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.source.label(class="form-control-label") }}
+                        {% if form.source.errors %}
+                            {% if alarm %}
+                                {{ form.source(class="form-control form-control-lg is-invalid", value=alarm.source) }}
+                            {% else %}
+                                {{ form.source(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.source.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if alarm %}
+                                {{ form.source(class="form-control form-control-lg", value=alarm.source) }}
+                            {% else %}
+                                {{ form.source(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.source_description.label(class="form-control-label") }}
+                        {% if form.source_description.errors %}
+                            {% if alarm %}
+                                {{ form.source_description(class="form-control form-control-lg is-invalid", value=alarm.source_description) }}
+                            {% else %}
+                                {{ form.source_description(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.source_description.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if alarm %}
+                                {{ form.source_description(class="form-control form-control-lg", value=alarm.source_description) }}
+                            {% else %}
+                                {{ form.source_description(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-6">
+                        {{ form.alarm_text.label(class="form-control-label") }}
+                        {% if form.alarm_text.errors %}
+                            {% if alarm %}
+                                {{ form.alarm_text(class="form-control form-control-lg is-invalid", value=alarm.alarm_text) }}
+                            {% else %}
+                                {{ form.alarm_text(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.alarm_text.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if alarm %}
+                                {{ form.alarm_text(class="form-control form-control-lg", value=alarm.alarm_text) }}
+                            {% else %}
+                                {{ form.alarm_text(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-group col-6">
+                        {{ form.triggered_time.label(class="form-control-label") }}
+                        {% if form.triggered_time.errors %}
+                            {% if alarm %}
+                                {{ form.triggered_time(class="form-control form-control-lg is-invalid", value=alarm.triggered_time) }}
+                            {% else %}
+                                {{ form.triggered_time(class="form-control form-control-lg is-invalid") }}
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% for error in form.triggered_time.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {% if alarm %}
+                                {{ form.triggered_time(class="form-control form-control-lg", value=alarm.triggered_time) }}
+                            {% else %}
+                                {{ form.triggered_time(class="form-control form-control-lg") }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
+
+                </div>
+
+
+            </fieldset>
+            <div class="form-group">
+                {% if alarm %}
+                    {{ form.submit(class="btn btn-outline-info", value="Update", checked=true) }}
+                {% else %}
+                    {{ form.submit(class="btn btn-outline-info") }}
+                {% endif %}
+            </div>
+
+
+            {% if admin %}
+                <div>
+                    <a href="{{ url_for('admin.alarms') }}">
+                        <button type="button" class="btn btn-outline-danger inline">Cancel</button>
+                    </a>
+                </div>
+            {% else %}
+                <div>
+                    <a href="{{ url_for('bacnet.alarms') }}">
+                        <button type="button" class="btn btn-outline-danger inline">Cancel</button>
+                    </a>
+                </div>
+            {% endif %}
+
+
+        </form>
+    </div>
+
+{% endblock content %}
