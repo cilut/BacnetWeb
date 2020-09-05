@@ -5,18 +5,7 @@
     <option name="SHOW_STRUCTURE" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BacnetWeb.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ciprian.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +256,7 @@
       <workItem from="1597164347709" duration="12270000" />
       <workItem from="1598655976461" duration="664000" />
       <workItem from="1598656658710" duration="582000" />
-      <workItem from="1599315968445" duration="3425000" />
+      <workItem from="1599315968445" duration="3719000" />
     </task>
     <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
       <created>1590946549880</created>
