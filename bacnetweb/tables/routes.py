@@ -1,6 +1,5 @@
 # import things
 from flask_table import Table, Col, BoolCol
-from bacnetweb.models import User
 
 
 # Declare your table
@@ -16,6 +15,7 @@ class day_sch_table():
     final_time = Col('Final time')
     value = Col('Value')
 
+
 # Get some objects
 class row_user(object):
     def __init__(self, usr, password, email, admin):
@@ -23,5 +23,3 @@ class row_user(object):
         self.password = password
         self.email = email
         self.admin = admin
-
-

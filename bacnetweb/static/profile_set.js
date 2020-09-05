@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 //Comprobamos que las dos contraseñas coinciden.
                 if (pwd_new != pwd_rpt) {
-                    alert("Passwords provided do not match.")
+                    alert("Passwords provided do not match.");
                     document.querySelector('#pwd').value = '';
                     document.querySelector('#pwd_new').value = '';
                     document.querySelector('#pwd_rpt').value = '';
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.querySelector('#pwd_rpt').style.backgroundColor = '#ffffff';
                         return false;
                     }
-                }
+                };
 
                 // Add data to send with request
                 const data = new FormData();

@@ -1,10 +1,8 @@
 from flask import Flask
-
-from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail
-from flask_login import LoginManager
 from flask_admin import Admin
-from flask_user import UserManager, EmailManager
+from flask_login import LoginManager
+from flask_mail import Mail
+from flask_sqlalchemy import SQLAlchemy
 
 from bacnetweb.config import Config
 
@@ -22,7 +20,6 @@ def create_app(config_class=Config):
     db.init_app(app)
 
     login_manager.init_app(app)
-     #admin.init_app(app)
     login_manager.login_view = 'auth.login'
 
     from bacnetweb.main.routes import main as main_blueprint

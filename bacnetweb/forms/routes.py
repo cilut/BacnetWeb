@@ -1,8 +1,8 @@
-from flask_login import current_user
 from flask_wtf import FlaskForm
-from werkzeug.security import generate_password_hash, check_password_hash
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, ValidationError, TextAreaField, SelectField
-from wtforms.validators import InputRequired, Length, Email, EqualTo, DataRequired, ValidationError
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectField
+from wtforms.validators import Email, EqualTo, DataRequired, ValidationError
+
 from bacnetweb.models import User
 
 

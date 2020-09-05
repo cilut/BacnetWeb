@@ -23,12 +23,12 @@
 {% endblock %}
 
 {% block main_menu %}
-     <ul class="nav">
+    <ul class="nav">
         <li>
             <a href="/admin/user/">Users</a>
         </li>
         <li>
-             <a class="nav-item nav-link" href="{{ url_for('users.profile') }}">Account</a>
+            <a class="nav-item nav-link" href="{{ url_for('users.profile') }}">Account</a>
         </li>
         <li>
             <a class="nav-item nav-link" href="{{ url_for('auth.logout') }}">Logout</a>

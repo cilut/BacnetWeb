@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const request = new XMLHttpRequest();
         const user = document.querySelector('#user').value;
         const pwd = document.querySelector('#pwd').value;
-        request.open('POST','/login');
+        request.open('POST', '/login');
 
         // Callback function for when request completes
         request.onload = () => {
@@ -19,14 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 //On success allowed to change the page
                 window.location.href = "profile";
                 return true;
-            }
-            else {
-                alert("Datos erroneos, prueba de nuevo.")
+            } else {
+                alert("Datos erroneos, prueba de nuevo.");
                 document.querySelector('#user').value = '';
                 document.querySelector('#pwd').value = '';
                 return false;
             }
-        }
+        };
 
         // Add data to send with request
         const data = new FormData();

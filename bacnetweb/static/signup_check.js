@@ -21,15 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.querySelector('#email').value;
         const pwd = document.querySelector('#pwd').value;
         const pwd_rpt = document.querySelector('#pwd_rpt').value;
-        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
-        {
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
             alert("You have entered an invalid email address, retry!");
             document.querySelector('#email').value = '';
             return false;
         }
 
         if (pwd != pwd_rpt) {
-            alert("Contraseñas no coinciden.")
+            alert("Contraseñas no coinciden.");
             document.querySelector('#pwd').value = '';
             document.querySelector('#pwd_rpt').value = '';
             document.querySelector('#pwd_rpt').style.backgroundColor = '#ffffff';
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update the result div
             if (response.success) {
                 //On success allowed to change the page
-                alert("Perfil creado satisfactoriamentes \n  Usuario: "+user+ "\n  Email: "+email);
+                alert("Perfil creado satisfactoriamentes \n  Usuario: " + user + "\n  Email: " + email);
 
                 window.location.href = "/";
                 return true;
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('#users').value = '';
                 return false;
             }
-        }
+        };
 
         // Add data to send with request
         const data = new FormData();

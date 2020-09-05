@@ -1,10 +1,9 @@
-from flask import render_template, request, Blueprint, redirect, url_for, jsonify, flash
+from flask import render_template, Blueprint, redirect, url_for, flash
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from bacnetweb import db
 from bacnetweb.forms.routes import LoginForm, SignupForm
-
 from bacnetweb.models import User
 
 auth = Blueprint('auth', __name__)
@@ -33,7 +32,8 @@ def signup():
         return redirect(url_for('users.profile'))
     form = SignupForm()
     if form.validate_on_submit():
-        usr = User(usr=form.username.data, password=generate_password_hash(form.password.data, "sha256"), email=form.email.data, admin=False)
+        usr = User(usr=form.username.data, password=generate_password_hash(form.password.data, "sha256"),
+                   email=form.email.data, admin=False)
         db.session.add(usr)
         db.session.commit()
         flash(f'Account created for {form.username.data}', 'success')
@@ -46,4 +46,3 @@ def signup():
 def logout():
     logout_user()
     return redirect(url_for('main.index'))
-

@@ -1,16 +1,12 @@
 import re
 
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash
-from flask_login import login_required, current_user
-from flask_mail import Message
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Blueprint, render_template, redirect, url_for, flash
+from werkzeug.security import generate_password_hash
 
-from bacnetweb import mail, db
+from bacnetweb import db
 from bacnetweb.access_level import requires_access_level
+from bacnetweb.forms.routes import AdminUserForm, AdminSignupForm, SchedulesRegisterForm, AlarmsRegisterForm
 from bacnetweb.models import User, Schedule, DailySchedule, Alarm
-from flask_user import roles_required
-
-from bacnetweb.forms.routes import UpdateForm, AdminUserForm, AdminSignupForm, SchedulesRegisterForm, AlarmsRegisterForm
 
 admin = Blueprint('admin', __name__)
 

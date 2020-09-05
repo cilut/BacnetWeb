@@ -1,16 +1,14 @@
-from datetime import datetime
-
 from flask import current_app
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-from bacnetweb import login_manager, admin, db
-from flask_login import UserMixin, current_user
 from flask_admin.contrib.sqla import ModelView
+from flask_login import UserMixin, current_user
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+
+from bacnetweb import login_manager, db
 
 
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
 
 
 class User(UserMixin, db.Model):
@@ -83,6 +81,3 @@ class MyModelView(ModelView):
 
     def is_accessible(self):
         return current_user.is_authenticated and current_user.admin
-
-
-admin.add_view(MyModelView(User, db.session))

@@ -1,5 +1,6 @@
 from functools import wraps
-from flask import url_for,  redirect,  flash
+
+from flask import url_for, redirect, flash
 from flask_login import current_user
 
 from bacnetweb.models import User
@@ -18,5 +19,7 @@ def requires_access_level():
                 flash('You do not have access to that page. Sorry!', 'danger')
                 return redirect(url_for('users.profile'))
             return f(*args, **kwargs)
+
         return decorated_function
+
     return decorator

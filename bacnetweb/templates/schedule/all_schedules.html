@@ -64,11 +64,11 @@
                 <td>
                     {% if user %}
                         <a href="{{ url_for('admin.schedule', schedule_id=schedule.id, user_id=schedule.id_user) }}">
-                            <i > {{ schedule.object_identifier }}</i>
+                            <i> {{ schedule.object_identifier }}</i>
                         </a>
                     {% else %}
                         <a href="{{ url_for('bacnet.schedule', schedule_id=schedule.id) }}">
-                            <i > {{ schedule.object_identifier }} </i>
+                            <i> {{ schedule.object_identifier }} </i>
                         </a>
                     {% endif %}
 

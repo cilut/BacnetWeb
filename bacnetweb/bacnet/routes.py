@@ -1,14 +1,12 @@
-from typing import List, Any
+import re
 
-from flask import Flask, render_template, request, Blueprint, redirect, url_for, jsonify, flash
-from flask_login import login_user, login_required, logout_user, current_user
+from flask import render_template, Blueprint, redirect, url_for, flash
+from flask_login import login_required, current_user
 
 from bacnetweb import db
-from bacnetweb.forms.routes import LoginForm, SignupForm, SchedulesRegisterForm, DailyScheduleRegisterForm, \
+from bacnetweb.forms.routes import SchedulesRegisterForm, DailyScheduleRegisterForm, \
     SpecialScheduleRegisterForm, AlarmsRegisterForm
-from bacnetweb.models import Schedule, DailySchedule, User, Alarm
-from bacnetweb.tables.routes import user_table
-import re
+from bacnetweb.models import Schedule, DailySchedule, Alarm
 
 bacnet = Blueprint('bacnet', __name__)
 

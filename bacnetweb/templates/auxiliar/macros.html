@@ -1,7 +1,7 @@
 
 
 {% macro input(name, text, placeholder, input_type) -%}
-        <label for="{{ name }}"><strong>{{ text }}</strong><span class="right">{{ help_text }}</span></label>
-        <input id="{{ name }}" type="{{ input_type }}" placeholder="{{ placeholder }}" name="{{ name }}" required />
+    <label for="{{ name }}"><strong>{{ text }}</strong><span class="right">{{ help_text }}</span></label>
+    <input id="{{ name }}" type="{{ input_type }}" placeholder="{{ placeholder }}" name="{{ name }}" required/>
 {%- endmacro %}
 

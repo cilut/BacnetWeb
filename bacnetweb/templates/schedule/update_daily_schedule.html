@@ -51,7 +51,7 @@
                 <div class="form-group col-6">
                     {{ form.value.label(class="form-control-label", placeholder= current_daily_sch.value) }}
                     {% if form.value.errors %}
-                        {{ form.value(class="form-control form-control-lg is-invalid", placeholder= current_daily_sch.value)  }}
+                        {{ form.value(class="form-control form-control-lg is-invalid", placeholder= current_daily_sch.value) }}
                         <div class="invalid-feedback">
                             {% for error in form.value.errors %}
                                 <span>{{ error }}</span>
