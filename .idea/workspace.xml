@@ -6,69 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/access_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/access_level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/admin/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/admin/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/auth/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/bacnet/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/bacnet/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/forms/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/forms/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/main/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/login_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/login_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/page_struct.svg" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/page_struct.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/profile_set.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/profile_set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/sortable-theme-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/sortable-theme-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/sortable-theme-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/static/sortable-theme-light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/tables/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/tables/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/admin/all_users.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/admin/all_users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/admin/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/admin/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/macros.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/struct.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/struct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/schedule/all_schedules.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/schedule/all_schedules.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/schedule/schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/schedule/schedule.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/schedule/update_daily_schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/schedule/update_daily_schedule.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/reset_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/signup/reset_pass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/user/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/user/updateProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/user/updateProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/user/user_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/user/user_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/users/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links" beforeDir="false" afterPath="$PROJECT_DIR$/links" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/.hsdoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/Gruntfile.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/coffee/sortable.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/component.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/css/sortable-theme-bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/css/sortable-theme-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/css/sortable-theme-finder.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/css/sortable-theme-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/css/sortable-theme-minimal.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/css/sortable-theme-slick.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/docs/api/1-Options.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/docs/api/2-Themes.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/docs/intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/docs/welcome/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/install.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/js/install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/js/sortable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/js/sortable.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/_sortable.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/sortable-theme-bootstrap.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/sortable-theme-dark.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/sortable-theme-finder.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/sortable-theme-light.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/sortable-theme-minimal.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortable-0.8.0/sass/sortable-theme-slick.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/links" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/links" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +258,7 @@
       <workItem from="1597164347709" duration="12270000" />
       <workItem from="1598655976461" duration="664000" />
       <workItem from="1598656658710" duration="582000" />
-      <workItem from="1599315968445" duration="1942000" />
+      <workItem from="1599315968445" duration="2439000" />
     </task>
     <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
       <created>1590946549880</created>
