@@ -5,7 +5,34 @@
     <option name="SHOW_STRUCTURE" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="" />
+    <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/BacnetWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BacnetWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/URLS.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/links" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/notas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/Untitled 1.odg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_em1qfd50.tbn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_h1u0yq4a.iyk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_hrd2gw2v.zew.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_ucpqifk1.mqo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/main/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/Database/roles.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/login_check.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/page_struct.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/profile_set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/reset_pass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/static/sortable-theme-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/tables/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/tables/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/admin/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/macros.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/struct.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/user/user_admin.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +52,9 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BacnetWeb" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -32,13 +62,16 @@
         <option value="Setup Script" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern="file[BacnetWeb]:*||file[BacnetWeb]:*/" />
   </component>
   <component name="ProjectId" id="1cKTI8QMSfiRvwE21fMhqbevTFA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -54,6 +87,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -76,11 +110,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bacnetweb/authentication" />
+      <recent name="$PROJECT_DIR$/bacnetweb" />
       <recent name="$PROJECT_DIR$/bacnetweb/zfotos_disenio" />
       <recent name="$PROJECT_DIR$/bacnetweb/templates/auxiliar" />
       <recent name="$PROJECT_DIR$/bacnetweb/templates/signup" />
-      <recent name="$PROJECT_DIR$/bacnetweb/templates/login" />
-      <recent name="$PROJECT_DIR$/bacnetweb/templates/user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bacnetweb/static" />
@@ -256,7 +290,10 @@
       <workItem from="1597164347709" duration="12270000" />
       <workItem from="1598655976461" duration="664000" />
       <workItem from="1598656658710" duration="582000" />
-      <workItem from="1599315968445" duration="3719000" />
+      <workItem from="1599315968445" duration="11687000" />
+      <workItem from="1599387509937" duration="1278000" />
+      <workItem from="1599409368449" duration="2447000" />
+      <workItem from="1599412089806" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
       <created>1590946549880</created>
@@ -354,23 +391,23 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/1600.0.1920.1080/0.27.1600.833@1600.0.1920.1080" timestamp="1595522279381" />
+    <state x="2224" y="210" width="662" height="627" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599411136798">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2224" y="210" width="662" height="627" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.112.1600.833/1600.0.1920.1080@1600.0.1920.1080" timestamp="1599411136798" />
     <state x="1999" y="217" width="918" height="636" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590939383321">
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="1999" y="217" width="918" height="636" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590939383321" />
-    <state x="2178" y="355" width="501" height="547" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1590690185224">
-      <screen x="1500" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2178" y="355" width="501" height="547" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590690185224" />
     <state x="1725" y="107" width="1431" height="809" key="dock-window-1" timestamp="1596028777563">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="1273" y="226" width="606" height="742" key="dock-window-1/0.27.1920.1013@0.27.1920.1013" timestamp="1593384323533" />
     <state x="1725" y="107" width="1431" height="809" key="dock-window-1/1600.0.1920.1080/0.27.1600.833@1600.0.1920.1080" timestamp="1596028777563" />
-    <state x="2315" y="111" width="714" height="868" key="find.popup" timestamp="1599321402155">
+    <state x="1741" y="404" width="704" height="555" key="find.popup" timestamp="1599413261756">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2315" y="111" width="714" height="868" key="find.popup/0.112.1600.833/1600.0.1920.1080@1600.0.1920.1080" timestamp="1599321402155" />
+    <state x="1741" y="404" width="704" height="555" key="find.popup/0.112.1600.833/1600.0.1920.1080@1600.0.1920.1080" timestamp="1599413261756" />
     <state x="699" y="98" width="704" height="814" key="find.popup/0.27.1920.1013@0.27.1920.1013" timestamp="1594039958509" />
     <state x="2265" y="80" width="704" height="867" key="find.popup/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590941981593" />
     <state x="2315" y="111" width="714" height="868" key="find.popup/1600.0.1920.1080/0.27.1600.833@1600.0.1920.1080" timestamp="1598656938530" />
@@ -378,9 +415,14 @@
       <screen x="1500" y="0" width="1920" height="1080" />
     </state>
     <state x="2836" y="190" width="192" height="647" key="ftp.server.browser/1500.0.1920.1080/0.27.1500.933@1500.0.1920.1080" timestamp="1590944415006" />
-    <state x="2703" y="237" width="672" height="723" key="search.everywhere.popup" timestamp="1595522296036">
+    <state x="2150" y="185" width="800" height="684" key="scopes" timestamp="1599410978496">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
+    <state x="2150" y="185" width="800" height="684" key="scopes/0.112.1600.833/1600.0.1920.1080@1600.0.1920.1080" timestamp="1599410978496" />
+    <state x="2703" y="237" width="672" height="723" key="search.everywhere.popup" timestamp="1599326206847">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2703" y="237" width="672" height="723" key="search.everywhere.popup/0.112.1600.833/1600.0.1920.1080@1600.0.1920.1080" timestamp="1599326206847" />
     <state x="1103" y="249" width="672" height="678" key="search.everywhere.popup/0.27.1920.1013@0.27.1920.1013" timestamp="1593119879034" />
     <state x="2703" y="237" width="672" height="723" key="search.everywhere.popup/1600.0.1920.1080/0.27.1600.833@1600.0.1920.1080" timestamp="1595522296036" />
     <state x="205" y="433" width="540" height="205" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1593270495498">

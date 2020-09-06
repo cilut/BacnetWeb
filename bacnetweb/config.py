@@ -12,7 +12,7 @@ class Config:
     MAIL_PASSWORD = os.getenv("PASS_GMAIL")
     # Flask-User settings
     USER_APP_NAME = "Flask-User Basic App"  # Shown in and email templates and page footers
-    USER_ENABLE_EMAIL = True  # Enable email authentication
-    USER_ENABLE_USERNAME = False  # Disable username authentication
+    USER_ENABLE_EMAIL = True  # Enable email auth
+    USER_ENABLE_USERNAME = False  # Disable username auth
     USER_EMAIL_SENDER_NAME = USER_APP_NAME
     USER_EMAIL_SENDER_EMAIL = "noreply@example.com"
