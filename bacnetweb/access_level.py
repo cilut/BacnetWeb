@@ -12,7 +12,7 @@ def requires_access_level():
         def decorated_function(*args, **kwargs):
             if not current_user.is_authenticated:
                 flash('Log-in with the proper user to access this endpoint.', 'danger')
-                return redirect(url_for('auth.login'))
+                return redirect(url_for('auth.auth'))
 
             user = User.query.filter_by(usr=current_user.usr).first()
             if not user.allowed():

@@ -52,7 +52,7 @@ If you did not request this email then simply ignore this email.
         mail.send(msg)
         flash(f'If there is an account that matches the user and the email check your mailbox ', 'success')
         return redirect(url_for("main.index"))
-    return render_template("signup/reset_pass.html", form=form)
+    return render_template("signup/../templates/auth/reset_pass.html", form=form)
 
 
 @users.route("/new_pass/<token>", methods=['GET', 'POST'])
@@ -65,4 +65,4 @@ def new_pass(token):
         db.session.commit()
         flash(f'Password updated properly for user:  {usr.usr}', 'success')
         return redirect(url_for("main.index"))
-    return render_template('signup/new_pass.html', title='Account', form=form)
+    return render_template('signup/../templates/auth/new_pass.html', title='Account', form=form)

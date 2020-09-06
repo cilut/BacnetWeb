@@ -9,7 +9,7 @@ from bacnetweb.models import User
 auth = Blueprint('auth', __name__)
 
 
-@auth.route('/login', methods=['GET', 'POST'])
+@auth.route('/auth', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('users.profile'))
@@ -23,7 +23,7 @@ def login():
             return redirect(url_for('users.profile'))
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
-    return render_template("login/login.html", title='Login', form=form)
+    return render_template("auth/login.html", title='Login', form=form)
 
 
 @auth.route("/signup", methods=['GET', 'POST'])
@@ -37,8 +37,8 @@ def signup():
         db.session.add(usr)
         db.session.commit()
         flash(f'Account created for {form.username.data}', 'success')
-        return redirect(url_for('auth.login'))
-    return render_template('signup/signup.html', title='Signup', form=form)
+        return redirect(url_for('auth.auth'))
+    return render_template('signup/../templates/auth/signup.html', title='Signup', form=form)
 
 
 @auth.route('/logout')

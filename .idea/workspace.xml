@@ -6,32 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BacnetWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BacnetWeb.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/URLS.odt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/links" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/notas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/Untitled 1.odg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_em1qfd50.tbn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_h1u0yq4a.iyk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_hrd2gw2v.zew.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/zfotos_disenio/picturemessage_ucpqifk1.mqo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/main/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/Database/roles.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/login_check.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/page_struct.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/profile_set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/reset_pass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/signup_check.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/static/sortable-theme-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/tables/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/tables/routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/admin/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/macros.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/struct.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/user/user_admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/access_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/access_level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/auth/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/forms/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/forms/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/new_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/new_pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/reset_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/reset_pass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bacnetweb/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/users/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,11 +95,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bacnetweb/templates/auth" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bacnetweb/authentication" />
       <recent name="$PROJECT_DIR$/bacnetweb" />
       <recent name="$PROJECT_DIR$/bacnetweb/zfotos_disenio" />
-      <recent name="$PROJECT_DIR$/bacnetweb/templates/auxiliar" />
-      <recent name="$PROJECT_DIR$/bacnetweb/templates/signup" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bacnetweb/static" />
@@ -293,7 +278,7 @@
       <workItem from="1599315968445" duration="11687000" />
       <workItem from="1599387509937" duration="1278000" />
       <workItem from="1599409368449" duration="2447000" />
-      <workItem from="1599412089806" duration="2170000" />
+      <workItem from="1599412089806" duration="4525000" />
     </task>
     <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
       <created>1590946549880</created>
