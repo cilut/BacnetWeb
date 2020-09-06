@@ -20,7 +20,7 @@ def create_app(config_class=Config):
     db.init_app(app)
 
     login_manager.init_app(app)
-    login_manager.login_view = 'auth.auth'
+    login_manager.login_view = 'auth.login'
 
     from bacnetweb.main.routes import main as main_blueprint
     app.register_blueprint(main_blueprint)

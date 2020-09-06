@@ -7,16 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12db5c39-3ebb-4942-9698-fede1a5e73a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/access_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/access_level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/auth/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/forms/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/forms/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auxiliar/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/new_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/new_pass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/reset_pass.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/reset_pass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/templates/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/templates/auth/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bacnetweb/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bacnetweb/users/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +269,7 @@
       <workItem from="1599315968445" duration="11687000" />
       <workItem from="1599387509937" duration="1278000" />
       <workItem from="1599409368449" duration="2447000" />
-      <workItem from="1599412089806" duration="4525000" />
+      <workItem from="1599412089806" duration="4657000" />
     </task>
     <task id="LOCAL-00001" summary="Code restructuring making it more modular, each class is currently a module.">
       <created>1590946549880</created>

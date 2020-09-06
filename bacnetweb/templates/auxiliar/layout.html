@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bacnet Administrator Web</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
 
 
     <!-- Bootstrap CSS -->
@@ -101,7 +101,7 @@
                         <a class="nav-item nav-link" href="{{ url_for('users.profile') }}">Account</a>
                         <a class="nav-item nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
                     {% else %}
-                        <a class="nav-item nav-link" href="{{ url_for('auth.auth') }}">Login</a>
+                        <a class="nav-item nav-link" href="{{ url_for('auth.login') }}">Login</a>
                         <a class="nav-item nav-link" href="{{ url_for('auth.signup') }}">Register</a>
                     {% endif %}
                 </div>
