@@ -5,66 +5,101 @@
             {{ form.hidden_tag() }}
 
             <fieldset class="form-group ">
-                <legend class="border-bottom mb-4">Update Daily Schedule</legend>
 
+
+                {% if title =='Special' %}
+                    <legend class="border-bottom mb-4">Update {{ title }} Schedule</legend>
+                    <div class="form-group col-6">
+                        {{ form.day.label(class="form-control-label") }}
+
+                        {% if form.day.errors %}
+                            <input form.day class="form-control form-control-lg is-invalid" type="date" id="day"
+                                   name="day" type="text" value="{{ current_daily_sch.day }}">
+
+                            <div class="invalid-feedback">
+                                {% for error in form.day.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+
+                            <input form.day class="form-control form-control-lg" type="date" id="day"
+                                   name="day" value="{{ current_daily_sch.day }}">
+
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <legend class="border-bottom mb-4">Update Daily Schedule</legend>
+                    <div class="form-group col-6">
+                        {{ form.day.label(class="form-control-label") }}
+
+                        {% if form.day.errors %}
+                            {{ form.day(class="form-control form-control-lg is-invalid") }}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.day.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.day(class="form-control form-control-lg", value= current_daily_sch.day) }}
+                        {% endif %}
+                    </div>
+                {% endif %}
                 <div class="form-group col-6">
-                    {{ form.day.label(class="form-control-label") }}
-
-                    {% if form.day.errors %}
-                        {{ form.day(class="form-control form-control-lg is-invalid", placeholder= current_daily_sch.day) }}
-                        <div class="invalid-feedback">
-                            {% for error in form.day.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.day(class="form-control form-control-lg", placeholder= current_daily_sch.day) }}
-                    {% endif %}
-                </div>
-
-                <div class="form-group col-6">
-                    {{ form.initial_time.label(class="form-control-label", placeholder= current_daily_sch.initial_time) }}
+                    {{ form.initial_time.label(class="form-control-label") }}
                     {% if form.initial_time.errors %}
-                        {{ form.initial_time(class="form-control form-control-lg is-invalid") }}
+                        <input class="form-control form-control-lg is-invalid" id="initial_time" name="initial_time"
+                               required="" type="time" value="{{ current_daily_sch.initial_time }}" step="1">
                         <div class="invalid-feedback">
                             {% for error in form.initial_time.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.initial_time(class="form-control form-control-lg", placeholder= current_daily_sch.initial_time) }}
+                        <input class="form-control form-control-lg" id="initial_time" name="initial_time"
+                               required="" type="time" value="{{ current_daily_sch.initial_time }}" step="1">
+
                     {% endif %}
                 </div>
                 <div class="form-group col-6 ">
-                    {{ form.final_time.label(class="form-control-label", placeholder= current_daily_sch.final_time) }}
+                    {{ form.final_time.label(class="form-control-label") }}
                     {% if form.final_time.errors %}
-                        {{ form.final_time(class="form-control form-control-lg is-invalid") }}
+                        <input class="form-control form-control-lg is-invalid" id="final_time" name="final_time"
+                               required="" type="time" value="{{ current_daily_sch.final_time }}" step="1">
+
                         <div class="invalid-feedback">
                             {% for error in form.final_time.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.final_time(class="form-control form-control-lg", placeholder= current_daily_sch.final_time) }}
+                        <input class="form-control form-control-lg" id="final_time" name="final_time"
+                               required="" type="time" value="{{ current_daily_sch.final_time }}" step="1">
                     {% endif %}
                 </div>
                 <div class="form-group col-6">
                     {{ form.value.label(class="form-control-label", placeholder= current_daily_sch.value) }}
                     {% if form.value.errors %}
-                        {{ form.value(class="form-control form-control-lg is-invalid", placeholder= current_daily_sch.value) }}
+                        {{ form.value(class="form-control form-control-lg is-invalid", value= current_daily_sch.value) }}
                         <div class="invalid-feedback">
                             {% for error in form.value.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.value(class="form-control form-control-lg", placeholder= current_daily_sch.value) }}
+                        {{ form.value(class="form-control form-control-lg", value= current_daily_sch.value) }}
                     {% endif %}
                 </div>
 
             </fieldset>
             <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            <div>
+                <a href="{{ url_for('bacnet.schedule', schedule_id=current_daily_sch.object_id) }}">
+                    <button type="button" class="btn btn-outline-danger inline">Cancel</button>
+                </a>
             </div>
         </form>
     </div>

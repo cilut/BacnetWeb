@@ -3,7 +3,7 @@ from functools import wraps
 from flask import url_for, redirect, flash
 from flask_login import current_user
 
-from bacnetweb.models import User
+from bacnetweb.models import User, Schedule, Alarm
 
 
 def requires_access_level():
@@ -23,3 +23,33 @@ def requires_access_level():
         return decorated_function
 
     return decorator
+
+
+def requires_access_alarm(func):
+    @wraps(func)
+    def wraper(alarm_id, *args, **kwargs):
+        alarm = Alarm.query.filter_by(id=alarm_id).first()
+
+        if current_user.allowed():
+            return func(alarm_id, *args, **kwargs)
+        if alarm.id_user != current_user.id:
+            flash('You do not have access to that page. Sorry!', 'danger')
+            return redirect(url_for('main.index'))
+        return func(alarm_id, *args, **kwargs)
+
+    return wraper
+
+
+def requires_access_schedule(func):
+    @wraps(func)
+    def wraper(schedule_id, *args, **kwargs):
+        sch = Schedule.query.filter_by(id=current_user.schedule_id).first()
+        if current_user.allowed():
+            return func(schedule_id, *args, **kwargs)
+
+        if sch.id_user != current_user.id:
+            flash('You do not have access to that page. Sorry!', 'danger')
+            return redirect(url_for('main.index'))
+        return func(schedule_id, *args, **kwargs)
+
+    return wraper

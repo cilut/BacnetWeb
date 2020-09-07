@@ -48,7 +48,7 @@
                     {{ form.initial_time.label(class="form-control-label") }}
                     {% if form.initial_time.errors %}
                         <input class="form-control form-control-lg is-invalid" id="initial_time" name="initial_time"
-                               placeholder="hh:mm:ss" required="" type="time" value="" step="2" placeholder="hh:mm:ss">
+                               placeholder="hh:mm:ss" required="" type="time" value="" step="1" placeholder="hh:mm:ss">
                         <div class="invalid-feedback">
                             {% for error in form.initial_time.errors %}
                                 <span>{{ error }}</span>
@@ -56,7 +56,7 @@
                         </div>
                     {% else %}
                         <input class="form-control form-control-lg" id="initial_time" name="initial_time"
-                               placeholder="hh:mm:ss" required="" type="time" value="" step="2" placeholder="hh:mm:ss">
+                               placeholder="hh:mm:ss" required="" type="time" value="" step="1" placeholder="hh:mm:ss">
                     {% endif %}
                 </div>
                 <div class="form-group col-6 ">
@@ -64,7 +64,7 @@
                     {% if form.final_time.errors %}
                         {{ form.final_time(class="form-control form-control-lg is-invalid") }}
                         <input class="form-control form-control-lg is-invalid" id="final_time" name="final_time"
-                               placeholder="hh:mm:ss" required="" type="time" value="" step="2" placeholder="hh:mm:ss">
+                               placeholder="hh:mm:ss" required="" type="time" value="" step="1" placeholder="hh:mm:ss">
                         <div class="invalid-feedback">
                             {% for error in form.final_time.errors %}
                                 <span>{{ error }}</span>
@@ -72,7 +72,7 @@
                         </div>
                     {% else %}
                         <input class="form-control form-control-lg" id="final_time" name="final_time"
-                               placeholder="hh:mm:ss" required="" type="time" value="" step="2" placeholder="hh:mm:ss">
+                               placeholder="hh:mm:ss" required="" type="time" value="" step="1" placeholder="hh:mm:ss">
                     {% endif %}
                 </div>
                 <div class="form-group col-6">

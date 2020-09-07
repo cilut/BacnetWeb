@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_admin import Admin
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
@@ -9,7 +8,6 @@ from bacnetweb.config import Config
 db = SQLAlchemy()
 mail = Mail()
 login_manager = LoginManager()
-admin = Admin()
 
 
 def create_app(config_class=Config):

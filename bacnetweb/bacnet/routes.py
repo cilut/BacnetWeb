@@ -4,6 +4,7 @@ from flask import render_template, Blueprint, redirect, url_for, flash
 from flask_login import login_required, current_user
 
 from bacnetweb import db
+from bacnetweb.access_level import requires_access_schedule, requires_access_alarm
 from bacnetweb.forms.routes import SchedulesRegisterForm, DailyScheduleRegisterForm, \
     SpecialScheduleRegisterForm, AlarmsRegisterForm
 from bacnetweb.models import Schedule, DailySchedule, Alarm
@@ -45,8 +46,9 @@ def registerSchedule():
     return render_template('schedule/register.html', title='Register Schedule', form=form)
 
 
-@bacnet.route("/schedule/<schedule_id>/update", methods=['GET', 'POST'])
+@bacnet.route("/schedule/<int:schedule_id>/update", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def updateSchedule(schedule_id):
     form = SchedulesRegisterForm()
     sch = Schedule.query.filter_by(id=schedule_id).first()
@@ -72,6 +74,7 @@ def updateSchedule(schedule_id):
 
 @bacnet.route("/schedule/<int:schedule_id>", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def schedule(schedule_id):
     sch = Schedule.query.get_or_404(schedule_id)
     all_daily_schedules = DailySchedule.query.filter_by(object_id=schedule_id).all()
@@ -102,6 +105,7 @@ def schedule(schedule_id):
 
 @bacnet.route("/schedule/<int:schedule_id>/delete", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def delete_schedule(schedule_id):
     Schedule.query.filter_by(id=schedule_id, id_user=current_user.id).delete()
     db.session.commit()
@@ -110,6 +114,7 @@ def delete_schedule(schedule_id):
 
 @bacnet.route("/schedule/<int:schedule_id>/daily_sch", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def add_daily(schedule_id):
     form = DailyScheduleRegisterForm()
     if form.validate_on_submit():
@@ -129,6 +134,7 @@ def add_daily(schedule_id):
 
 @bacnet.route("/schedule/<int:schedule_id>/special_sch", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def add_special(schedule_id):
     form = SpecialScheduleRegisterForm()
     if form.validate_on_submit():
@@ -148,26 +154,50 @@ def add_special(schedule_id):
 
 @bacnet.route("/schedule/<int:schedule_id>/daily_sch/<daily_id>", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def update_daily(schedule_id, daily_id):
     form = DailyScheduleRegisterForm()
     current_daily_sch = DailySchedule.query.filter_by(id=daily_id).first()
     if form.validate_on_submit():
-        day_sch = DailySchedule(
-            day=form.day.data,
-            initial_time=form.initial_time.data,
-            final_time=form.final_time.data,
-            value=form.value.data,
-            object_id=schedule_id
-        )
-        db.session.add(day_sch)
+        current_daily_sch.day = form.day.data
+        current_daily_sch.initial_time = form.initial_time.data
+        current_daily_sch.final_time = form.final_time.data
+        current_daily_sch.value = form.value.data
+        current_daily_sch.object_id = schedule_id
+
+        db.session.add(current_daily_sch)
         db.session.commit()
-        flash(f'Daily schedule registered', 'success')
+        flash(f'Daily schedule updated', 'success')
         return redirect(url_for('bacnet.schedule', schedule_id=schedule_id))
     return render_template('schedule/update_daily_schedule.html', form=form, current_daily_sch=current_daily_sch)
 
 
+@bacnet.route("/schedule/<int:schedule_id>/special_sch/<special_id>", methods=['GET', 'POST'])
+@login_required
+@requires_access_schedule
+def update_special(schedule_id, special_id):
+    form = SpecialScheduleRegisterForm()
+    current_daily_sch = DailySchedule.query.filter_by(id=special_id).first()
+
+    if form.validate_on_submit():
+        current_daily_sch.day = form.day.data
+        current_daily_sch.initial_time = form.initial_time.data
+        current_daily_sch.final_time = form.final_time.data
+        current_daily_sch.value = form.value.data
+        current_daily_sch.object_id = schedule_id
+
+        db.session.add(current_daily_sch)
+        db.session.commit()
+        flash(f'Special schedule updated', 'success')
+        return redirect(url_for('bacnet.schedule', schedule_id=schedule_id))
+
+    return render_template('schedule/update_daily_schedule.html', form=form, current_daily_sch=current_daily_sch,
+                           title="Special")
+
+
 @bacnet.route("/schedule/<int:schedule_id>/daily_sch/<daily_id>/delete", methods=['GET', 'POST'])
 @login_required
+@requires_access_schedule
 def delete_daily(schedule_id, daily_id):
     DailySchedule.query.filter_by(id=daily_id).delete()
     db.session.commit()
@@ -201,8 +231,9 @@ def registerAlarm():
     return render_template('alarm/register.html', title='Register Schedule', form=form)
 
 
-@bacnet.route("/alarm/<alarm_id>/update", methods=['GET', 'POST'])
+@bacnet.route("/alarm/<int:alarm_id>/update", methods=['GET', 'POST'])
 @login_required
+@requires_access_alarm
 def updateAlarm(alarm_id):
     form = AlarmsRegisterForm()
     alarm = Alarm.query.filter_by(id=alarm_id).first()
@@ -225,6 +256,7 @@ def updateAlarm(alarm_id):
 
 @bacnet.route("/alarm/<int:alarm_id>/delete", methods=['GET', 'POST'])
 @login_required
+@requires_access_alarm
 def delete_alarm(alarm_id):
     Alarm.query.filter_by(id=alarm_id).delete()
     db.session.commit()

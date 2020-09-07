@@ -1,0 +1,48 @@
+Administrator urls:
+
+@admin.route('/admin/users', methods=['GET', 'POST'])
+def users():
+
+@admin.route('/admin/users/<user_id>', methods=['GET', 'POST'])
+def update_user(user_id):
+
+@admin.route("/admin/users/signup", methods=['GET', 'POST'])
+def register_user():
+
+@admin.route("/admin/users/<user_id>/delete")
+def delete_user(user_id):
+
+@admin.route('/admin/users/<user_id>/schedules', methods=['GET', 'POST'])
+def user_schedules(user_id):
+
+@admin.route('/admin/users/<user_id>/alarns', methods=['GET', 'POST'])
+def user_alarms(user_id):
+
+
+
+@admin.route("/admin/schedules", methods=['GET'])
+def schedules():
+
+@admin.route('/admin/schedule/<int:schedule_id>', methods=['GET', 'POST'])
+def schedule(schedule_id):
+
+@admin.route('/admin/schedule/<int:schedule_id>/update', methods=['GET', 'POST'])
+def update_schedule(schedule_id):
+
+@admin.route("/admin/schedule", methods=['GET', 'POST'])
+def register_schedule():
+
+
+
+
+@admin.route('/admin/alarms', methods=['GET', 'POST'])
+@requires_access_level()
+def alarms():
+
+@admin.route('/admin/schedule/<int:schedule_id>/update', methods=['GET', 'POST'])
+@requires_access_level()
+def update_alarm(alarm_id):
+
+@admin.route("/admin/schedule", methods=['GET', 'POST'])
+@requires_access_level()
+def register_alarm():
