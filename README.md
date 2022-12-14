@@ -6,3 +6,4 @@ Este proyecto busca la simplificación de la tarea de administrar dichos objetos
 Para la realización de este proyecto he trabajado de manera autónoma utilizando conocimientos adquiridos mediante las diferentes asignaturas del grado, principalmente para el diseño de la aplicación. Para el desarrollo me he basado en tutoriales ya que al utilizar un framework se trata de un conocimiento más específico. 
 
 El framework elegido para el desarrollo de la aplicación ha sido Flask ya que he considerado que es muy potente y bastante sencillo de adaptarlo a mis necesidades. Para el diseño y la implementación del front he utilizado principalmente HTML, CSS y Jinja2, en menor medida he tenido que utilizar JavaScript. 
+# Bacnet_EntregaFinal_TFG
